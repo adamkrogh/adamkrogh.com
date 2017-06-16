@@ -4,10 +4,10 @@
   "description": "Personal website and portfolio.",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean & gatsby build & copy",
-    "clean:public": "rm -rf public",
+    "build": "npm run clean & gatsby build & npm run copy",
+    "clean:public": "rimraf public",
     "clean": "npm run clean:public",
-    "copy:files": "cp pages/*.{pdf,txt,png,jpg,jpeg,gif} public/",
+    "copy:files": "cpx \"pages/*.{pdf,txt,png,jpg,jpeg,gif}\" public/",
     "copy": "npm run copy:files",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -51,6 +51,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-react-hmre": "^1.1.1",
     "bootstrap": "^4.0.0-alpha.6",
+    "cpx": "^1.5.0",
     "css-loader": "^0.23.1",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "^15.0.1",
@@ -69,6 +70,7 @@
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
+    "rimraf": "^2.6.1",
     "rucksack-css": "^0.8.5",
     "style-loader": "^0.13.1"
   }
