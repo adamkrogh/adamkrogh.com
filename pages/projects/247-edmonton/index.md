@@ -1,10 +1,11 @@
 ---
+id: 3
 title: "24/7 Edmonton"
 date: "2017-06-16T02:53:06+00:00"
 layout: post
 path: "/projects/247-edmonton/"
 category: "projects"
-description: "Something about 24/7 Edmonton"
+description: "Apps for helping outreach workers remotely update case information and track program statistics."
 ---
 
 ## 24/7 Edmonton

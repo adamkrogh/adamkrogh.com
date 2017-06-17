@@ -1,10 +1,11 @@
 ---
+id: 2
 title: "Tripitty"
 date: "2017-06-16T02:54:06+00:00"
 layout: post
 path: "/projects/tripitty/"
 category: "projects"
-description: "Something about Tripitty"
+description: "A web app for helping avid travellers track and share their world travel."
 ---
 
 ## Tripitty
