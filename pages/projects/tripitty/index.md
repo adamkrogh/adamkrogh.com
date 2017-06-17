@@ -1,7 +1,6 @@
 ---
-id: 2
+id: 4
 title: "Tripitty"
-date: "2017-06-16T02:54:06+00:00"
 layout: post
 path: "/projects/tripitty/"
 category: "projects"

@@ -1,13 +1,13 @@
 ---
-id: 2
-title: "24/7 Edmonton"
+id: 3
+title: "Neuromembrane"
 layout: post
-path: "/projects/247-edmonton/"
+path: "/projects/neuromembrane/"
 category: "projects"
-description: "Apps for helping outreach workers remotely update case information and track program statistics."
+description: "An educational simulator designed to teach students about neuroscience concepts."
 ---
 
-## 24/7 Edmonton
+## Neuromembrane
 
 Proin vestibulum sem eu turpis sagittis interdum. Fusce facilisis, massa a condimentum varius, libero nibh condimentum felis, ac vestibulum eros orci et elit. Duis convallis tortor ante, sed viverra mi egestas nec. Proin malesuada ex ac placerat vestibulum. Aliquam erat volutpat. Duis tincidunt tortor eu sem ultricies, ac efficitur risus maximus. Etiam elementum tincidunt vestibulum. Vivamus eget viverra arcu. Donec tempus odio elit.
 

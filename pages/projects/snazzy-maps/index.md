@@ -1,7 +1,6 @@
 ---
 id: 1
 title: "Snazzy Maps"
-date: "2017-06-16T02:55:06+00:00"
 layout: post
 path: "/projects/snazzy-maps/"
 category: "projects"
