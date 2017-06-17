@@ -5,48 +5,19 @@ import './style.css';
 
 class SiteNav extends React.Component {
     render() {
-        const { location } = this.props;
-        const { title } = this.props;
+        const { location, title } = this.props;
         return (
-            <nav className="navbar sticky-top navbar-toggleable-sm navbar-inverse bg-primary">
-                <button
-                    className="navbar-toggler navbar-toggler-right collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarColor02"
-                    aria-controls="navbarColor02"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon" />
-                </button>
+            <nav className="navbar sticky-top navbar-inverse bg-inverse">
                 <div className="container">
-                    <Link className="text-center" to={prefixLink('/')}>
-                        <h1 className="navbar-brand mb-0">{title}</h1>
+                    <Link to={prefixLink('/')}>
+                        <h1 className="navbar-brand">{title}</h1>
                     </Link>
-                    <div
-                        className="navbar-collapse collapse"
-                        id="navbarColor02"
-                        aria-expanded="false"
+                    <Link
+                        to={prefixLink('/profile/')}
+                        className="nav-item-right float-right"
                     >
-                        <ul className="navbar-nav mr-auto">
-                            <li
-                                className={
-                                    location.pathname ===
-                                        prefixLink('/profile/')
-                                        ? 'nav-item active'
-                                        : 'nav-item'
-                                }
-                            >
-                                <Link
-                                    to={prefixLink('/profile/')}
-                                    className="nav-link"
-                                >
-                                    About
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
+                        About & Contact
+                    </Link>
                 </div>
             </nav>
         );
@@ -54,7 +25,8 @@ class SiteNav extends React.Component {
 }
 
 SiteNav.propTypes = {
-    location: React.PropTypes.object
+    location: React.PropTypes.object,
+    title: React.PropTypes.string
 };
 
 export default SiteNav;

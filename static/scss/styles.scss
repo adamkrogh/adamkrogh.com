@@ -33,13 +33,6 @@ $enable-print-styles:       true !default;
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 740px,
-  xl: 840px
-) !default;
-
 // Body
 //
 // Settings for the `<body>` element.
@@ -89,12 +82,13 @@ $font-size-h6: 1rem !default;
 $headings-font-family:   inherit !default;
 $headings-font-weight:   600 !default;
 $headings-line-height:   1.1 !default;
-$headings-color:         inherit !default;
 
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
 $display3-size: 4.5rem !default;
 $display4-size: 3.5rem !default;
+
+$navbar-padding-y: (40px / 2) !default;
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -133,30 +127,30 @@ blockquote a {
     margin-bottom: 20px;
 }
 
-.badge {
-    margin-right: 3px;
+.sliding,.navbar-brand,.nav-item-right {
+    display: inline-block;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 0;
+        background: transparent;
+        transition: width .3s ease, background-color .3s ease;
+    }
+
+    &:hover:after {
+        width: 100%;
+        background: #fff;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .navbar .container {
+        margin: 0;
+    }
 }
 
-time {
-    font-size: 0.75rem;
-    color: #ccc;
-    display: inline;
-    margin-right: 10px;
-}
-
-img {
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    max-width: 100%;
-}
-
-img:hover {
-    -webkit-animation: pulse 0.5s;
-    animation: pulse 0.5s;
-}
-
-code {
-    border-radius: 3px !important;
-    padding: 0.25em 0.5em !important;
-    background: $gray-lightest !important;
+.intro {
+    background-color: $blue;
+    color: #f2f2f2;
 }

@@ -89,10 +89,22 @@ class SiteIndex extends React.Component {
 
         return (
             <DocumentTitle title={config.siteTitle}>
-                <div className="container">
-                    <div className="articles col-md-12">
-                        {pageLinks}
-                    </div>
+                <div>
+                    <section className="jumbotron jumbotron-fluid intro">
+                        <div className="container">
+                            <h1 className="display-3">Hi!</h1>
+                            <p className="lead ">
+                                I'm Adam Krogh, a full-stack developer living in Edmonton.
+                            </p>
+                        </div>
+                    </section>
+                    <section>
+                        <div className="container">
+                            <div className="articles col-md-12">
+                                {pageLinks}
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </DocumentTitle>
         );
