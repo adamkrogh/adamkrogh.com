@@ -79,7 +79,7 @@ $font-size-h5: 1.05rem !default;
 $font-size-h6: 1rem !default;
 
 // $headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
+$headings-font-family:   "Karla", "Helvetica Neue", Helvetica, sans-serif !default;
 $headings-font-weight:   600 !default;
 $headings-line-height:   1.1 !default;
 
@@ -91,6 +91,10 @@ $display4-size: 3.5rem !default;
 $navbar-padding-y: (40px / 2) !default;
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
 
 blockquote a {
     display: block;
@@ -142,6 +146,10 @@ blockquote a {
     &:hover:after {
         width: 100%;
         background: #fff;
+    }
+
+    &.inverse:hover:after {
+        background: #000;
     }
 }
 @include media-breakpoint-down(xs) {

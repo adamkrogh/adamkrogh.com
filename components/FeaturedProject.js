@@ -3,41 +3,49 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
-const ProjectTitle = styled.h3`
+const ProjectLink = styled(Link)`
+    color: #2e3b41;
     text-transform: uppercase;
 `;
+
+const Category = ({ label }) => (
+    <span className="badge badge-success">
+        {label}
+    </span>
+);
 
 export default class FeaturedProject extends React.Component {
     render() {
         const { page } = this.props;
         const { title, description, category } = page.data;
         return (
-            <Link to={prefixLink(page.path)}>
-                <div className="row project-row">
-                    <div className="col-md-4">
-                        <img
-                            src="//placehold.it/720x440"
-                            className="img-fluid"
-                            alt={title}
-                        />
-                    </div>
-                    <div className="col-md-8">
-                        <header>
-                            <ProjectTitle>{title}</ProjectTitle>
-                            {category &&
-                                category.split(',').map(cat => (
-                                    <span
-                                        className="badge badge-success"
-                                        key={cat}
-                                    >
-                                        {cat}
-                                    </span>
-                                ))}
-                        </header>
-                        <p dangerouslySetInnerHTML={{ __html: description }} />
-                    </div>
+            <div className="row project-row align-items-center">
+                <div className="col-md-5">
+                    <img
+                        src="//placehold.it/720x440"
+                        className="img-fluid"
+                        alt={title}
+                    />
                 </div>
-            </Link>
+                <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1">
+                    <header>
+                        <h3 className="h2">{title}</h3>
+                        {category &&
+                            category
+                                .split(',')
+                                .map(label => (
+                                    <Category label={label} key={label} />
+                                ))}
+                    </header>
+                    <p dangerouslySetInnerHTML={{ __html: description }} />
+                    <ProjectLink
+                        to={prefixLink(page.path)}
+                        className="sliding inverse"
+                    >
+                        View Case Study
+                    </ProjectLink>
+                </div>
+            </div>
         );
     }
 }
