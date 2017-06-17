@@ -42,7 +42,7 @@
     "react-router": "^2.6.1",
     "react-share": "^1.11.0",
     "safe-access": "^0.1.0",
-    "styled-components": "^2.1.0",
+    "styled-components": "1.4.6",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
