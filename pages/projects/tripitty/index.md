@@ -1,9 +1,10 @@
 ---
 id: 4
 title: "Tripitty"
-layout: post
+layout: project
 path: "/projects/tripitty/"
 category: "projects"
+color: "#0d9fb0"
 description: "A web app for helping avid travellers track and share their world travel."
 ---
 

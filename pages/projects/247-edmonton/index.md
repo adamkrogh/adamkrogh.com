@@ -1,9 +1,10 @@
 ---
 id: 2
 title: "24/7 Edmonton"
-layout: post
+layout: project
 path: "/projects/247-edmonton/"
 category: "projects"
+color: "#F5AB35"
 description: "Apps for helping outreach workers remotely update case information and track program statistics."
 ---
 

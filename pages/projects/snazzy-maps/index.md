@@ -1,9 +1,10 @@
 ---
 id: 1
 title: "Snazzy Maps"
-layout: post
+layout: project
 path: "/projects/snazzy-maps/"
 category: "projects"
+color: "#139459"
 description: "A community centered around creating and sharing beautiful styles for Google Maps."
 ---
 

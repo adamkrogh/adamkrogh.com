@@ -1,9 +1,10 @@
 ---
 id: 3
 title: "Neuromembrane"
-layout: post
+layout: project
 path: "/projects/neuromembrane/"
 category: "projects"
+color: "#8E44AD"
 description: "An educational simulator designed to teach students about neuroscience concepts."
 ---
 

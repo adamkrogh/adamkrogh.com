@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Intro } from '../Shared';
+import { Intro } from './Shared';
 
 class ProjectPage extends React.Component {
     render() {
