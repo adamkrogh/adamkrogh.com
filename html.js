@@ -1,6 +1,7 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
+import styleSheet from 'styled-components/lib/models/StyleSheet';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -22,14 +23,25 @@ module.exports = React.createClass({
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
         );
 
-        let css;
+        let rawStyles;
         if (process.env.NODE_ENV === 'production') {
-            css = (
+            rawStyles = (
                 <style
                     dangerouslySetInnerHTML={{
                         __html: require('!raw!./public/styles.css')
                     }}
                 />
+            );
+        }
+
+        let styledComponents;
+        if (process.env.NODE_ENV === 'production') {
+            const styles = styleSheet
+                .rules()
+                .map(rule => rule.cssText)
+                .join('\n');
+            styledComponents = (
+                <style dangerouslySetInnerHTML={{ __html: styles }} />
             );
         }
 
@@ -54,7 +66,8 @@ module.exports = React.createClass({
                     <title>
                         {title}
                     </title>
-                    {css}
+                    {rawStyles}
+                    {styledComponents}
                     {jquery}
                     {tether}
                     {bootstrap}
