@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
-const ProjectLink = styled(Link)`
+const ProjectLink = styled(Link) `
     color: #2e3b41;
     text-transform: uppercase;
 `;
@@ -14,7 +14,7 @@ const Category = ({ label }) => (
     </span>
 );
 
-export default class FeaturedProject extends React.Component {
+class FeaturedProject extends React.Component {
     render() {
         const { page } = this.props;
         const { title, description, category } = page.data;
@@ -49,3 +49,5 @@ export default class FeaturedProject extends React.Component {
         );
     }
 }
+
+export default FeaturedProject;
