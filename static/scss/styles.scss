@@ -52,6 +52,9 @@ $brand-inverse:             $gray-dark !default;
 // Links
 //
 // Style anchor elements.
+$link-color:            $body-color !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
 
@@ -94,6 +97,14 @@ $navbar-padding-y: (40px / 2) !default;
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
+}
+
+footer a {
+    color: #ddd;
+
+    &:hover, &:active, &:focus {
+        color: #fff;
+    }
 }
 
 blockquote a {
