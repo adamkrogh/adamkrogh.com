@@ -31,7 +31,7 @@ class Navbar extends React.Component {
     render() {
         const { location, title } = this.props;
         return (
-            <nav className="navbar sticky-top navbar-inverse bg-inverse">
+            <nav className="navbar navbar-inverse bg-inverse">
                 <div className="container">
                     <HomeLink to={prefixLink('/')}>
                         <h1 className="navbar-brand">{title}</h1>
