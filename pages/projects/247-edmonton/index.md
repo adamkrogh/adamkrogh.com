@@ -3,14 +3,26 @@ id: 2
 title: "24/7 Edmonton"
 layout: project
 path: "/projects/247-edmonton/"
-category: "projects"
+category: "c#,ionic,angular"
 color: "#F5AB35"
 image: "247edmonton-screen.png"
 description: "Apps for helping outreach workers remotely update case information and track program statistics."
 ---
 
-## 24/7 Edmonton
+## Overview
 
-Proin vestibulum sem eu turpis sagittis interdum. Fusce facilisis, massa a condimentum varius, libero nibh condimentum felis, ac vestibulum eros orci et elit. Duis convallis tortor ante, sed viverra mi egestas nec. Proin malesuada ex ac placerat vestibulum. Aliquam erat volutpat. Duis tincidunt tortor eu sem ultricies, ac efficitur risus maximus. Etiam elementum tincidunt vestibulum. Vivamus eget viverra arcu. Donec tempus odio elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, nisl sit amet viverra dapibus, ex eros efficitur sem, a eleifend massa ante a enim. Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
 
-Mauris convallis risus a blandit auctor. Pellentesque lacinia sagittis suscipit. Phasellus a turpis aliquam, pharetra arcu non, pulvinar ipsum. Nullam nunc urna, rhoncus scelerisque mi quis, lacinia venenatis erat. Etiam ornare finibus magna, elementum dignissim velit scelerisque non. Proin venenatis urna vitae rutrum varius. Sed ultrices urna dolor, id mollis augue vulputate quis. Fusce risus ante, lacinia sed diam in, feugiat semper neque. Donec a venenatis elit. Nunc turpis ipsum, suscipit eu mollis vel, consectetur vitae lacus. Curabitur venenatis, est a pulvinar sodales, massa elit ornare lacus, quis interdum massa erat ut lacus. Cras aliquet ornare sem a gravida. Maecenas consequat id quam vel porttitor. Pellentesque non metus eget justo pharetra vehicula ut sit amet ipsum. Pellentesque mauris urna, tempus sit amet scelerisque sit amet, efficitur cursus tellus.
+## Problem -> Solution
+
+Proin in aliquet eros, condimentum tempor risus. Aliquam tempus congue lectus, scelerisque tincidunt urna aliquet quis. Mauris egestas imperdiet felis. Suspendisse in tortor sed diam dictum consectetur. Pellentesque malesuada libero eros, nec malesuada diam tristique non. Suspendisse pretium lobortis libero, id hendrerit dolor pretium non. Morbi eget odio posuere, tempor magna ut, mattis ipsum. Sed maximus ante ante, interdum ultricies lacus venenatis et.
+
+![Screenshot](https://placehold.it/720x500)
+
+## Results
+
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
+
+## Tech
+
+Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit.
