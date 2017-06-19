@@ -17,12 +17,6 @@ const StyledFooter = styled.footer`
     }
 `;
 
-const SocialIcon = styled.a`
-    font-size: 32px;
-    line-height: 32px;
-    padding-right: 10px;
-`;
-
 const FooterButton = styled.a`
     font-size: 12px;
     display: inline-block;
@@ -30,6 +24,19 @@ const FooterButton = styled.a`
     border: 1px solid #fff;
     text-transform: uppercase;
 `;
+
+const StyledIcon = styled.a`
+    font-size: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+`;
+
+const SocialIcon = ({ link, icon, title }) => (
+    <StyledIcon href={link} target="_blank" rel="noopener noreferrer">
+        <i className={`fa fa-${icon}`} aria-hidden="true" title={title} />
+        <span className="sr-only">{title}</span>
+    </StyledIcon>
+);
 
 class Footer extends React.Component {
     render() {
@@ -56,23 +63,20 @@ class Footer extends React.Component {
                             </Link>
                             <div>
                                 <SocialIcon
-                                    href="https://github.com/adamkrogh"
-                                    target="_blank"
-                                >
-                                    <i className="fa fa-github" />
-                                </SocialIcon>
+                                    link="https://github.com/adamkrogh"
+                                    icon="github"
+                                    title="GitHub Profile"
+                                />
                                 <SocialIcon
-                                    href="https://twitter.com/adamkrogh"
-                                    target="_blank"
-                                >
-                                    <i className="fa fa fa-twitter" />
-                                </SocialIcon>
+                                    link="https://twitter.com/adamkrogh"
+                                    icon="twitter"
+                                    title="Twitter Profile"
+                                />
                                 <SocialIcon
-                                    href="https://www.linkedin.com/in/adamkrogh"
-                                    target="_blank"
-                                >
-                                    <i className="fa fa fa-linkedin" />
-                                </SocialIcon>
+                                    link="https://www.linkedin.com/in/adamkrogh"
+                                    icon="linkedin"
+                                    title="LinkedIn Profile"
+                                />
                             </div>
                             <FooterButton href="#">
                                 Download Resume
