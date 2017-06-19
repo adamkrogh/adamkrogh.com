@@ -14,6 +14,16 @@ module.exports = React.createClass({
         const { body, route } = this.props;
         const title = DocumentTitle.rewind();
 
+        let bootstrap;
+        if (process.env.NODE_ENV === 'production') {
+            bootstrap = (
+                <style
+                    dangerouslySetInnerHTML={{
+                        __html: require('!raw!./public/styles.css')
+                    }}
+                />
+            );
+        }
         let styledComponents;
         if (process.env.NODE_ENV === 'production') {
             const styles = styleSheet
@@ -50,6 +60,7 @@ module.exports = React.createClass({
                             rel="stylesheet"
                             type="text/css"
                         />}
+                    {bootstrap}
                     {styledComponents}
                 </head>
                 <body>
