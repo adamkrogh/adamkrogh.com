@@ -5,6 +5,7 @@ layout: project
 path: "/projects/neuromembrane/"
 category: "projects"
 color: "#8E44AD"
+image: "neuron-screen.png"
 description: "An educational simulator designed to teach students about neuroscience concepts."
 ---
 

@@ -13,26 +13,6 @@ module.exports = React.createClass({
     render() {
         const { body, route } = this.props;
         const title = DocumentTitle.rewind();
-        const jquery = (
-            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" />
-        );
-        const tether = (
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" />
-        );
-        const bootstrap = (
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
-        );
-
-        let rawStyles;
-        if (process.env.NODE_ENV === 'production') {
-            rawStyles = (
-                <style
-                    dangerouslySetInnerHTML={{
-                        __html: require('!raw!./public/styles.css')
-                    }}
-                />
-            );
-        }
 
         let styledComponents;
         if (process.env.NODE_ENV === 'production') {
@@ -54,6 +34,7 @@ module.exports = React.createClass({
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=5.0"
                     />
+                    <title>{title}</title>
                     <link
                         href="https://fonts.googleapis.com/css?family=Karla"
                         rel="stylesheet"
@@ -63,20 +44,22 @@ module.exports = React.createClass({
                         rel="stylesheet"
                         type="text/css"
                     />
-                    <title>
-                        {title}
-                    </title>
-                    {rawStyles}
+                    {process.env.NODE_ENV === 'production' &&
+                        <link
+                            href={prefixLink(`/styles.css?t=${BUILD_TIME}`)}
+                            rel="stylesheet"
+                            type="text/css"
+                        />}
                     {styledComponents}
-                    {jquery}
-                    {tether}
-                    {bootstrap}
                 </head>
                 <body>
                     <div
                         id="react-mount"
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
+                    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" />
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" />
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
                     <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
                 </body>
             </html>

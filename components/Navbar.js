@@ -14,13 +14,13 @@ const BaseLink = `
     text-decoration: none;
 `;
 
-const HomeLink = styled(Link) `
+const HomeLink = styled(Link)`
     .navbar-brand {
         ${BaseLink}
     }
 `;
 
-const AboutLink = styled(Link) `
+const AboutLink = styled(Link)`
     ${BaseLink}
     &:hover, &:active, &:focus {
         color: #f2f2f2;;

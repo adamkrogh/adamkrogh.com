@@ -26,10 +26,7 @@ class HomePage extends React.Component {
                             </div>
                         </div>
                         {projects.map(page => (
-                            <FeaturedProject
-                                page={page}
-                                key={page.data.id}
-                            />
+                            <FeaturedProject page={page} key={page.data.id} />
                         ))}
                     </div>
                 </section>

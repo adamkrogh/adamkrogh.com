@@ -5,6 +5,7 @@ layout: project
 path: "/projects/247-edmonton/"
 category: "projects"
 color: "#F5AB35"
+image: "247edmonton-screen.png"
 description: "Apps for helping outreach workers remotely update case information and track program statistics."
 ---
 

@@ -3,7 +3,7 @@ import sortBy from 'lodash/sortBy';
 import DocumentTitle from 'react-document-title';
 
 import { config } from 'config';
-import { HomePage } from '../components/Templates'
+import { HomePage } from '../components/Templates';
 
 class SiteIndex extends React.Component {
     render() {

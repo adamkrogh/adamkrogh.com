@@ -8,10 +8,11 @@ const getLayoutComponent = layout => {
     switch (layout) {
         case 'project':
             return ProjectPage;
+
         default:
             return DefaultPage;
     }
-}
+};
 
 class MarkdownWrapper extends React.Component {
     render() {

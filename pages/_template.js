@@ -10,10 +10,7 @@ import Footer from '../components/Footer';
 class Template extends React.Component {
     render() {
         const { children } = this.props;
-        const projects = sortBy(
-            this.props.route.pages,
-            page => page.data.id
-        )
+        const projects = sortBy(this.props.route.pages, page => page.data.id)
             .filter(page => page.data.layout === 'project')
             .map(page => page.data);
 

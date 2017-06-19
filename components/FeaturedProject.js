@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
-const ProjectLink = styled(Link) `
+const ProjectLink = styled(Link)`
     color: #2e3b41;
     text-transform: uppercase;
 `;
@@ -17,12 +17,12 @@ const Category = ({ label }) => (
 class FeaturedProject extends React.Component {
     render() {
         const { page } = this.props;
-        const { title, description, category } = page.data;
+        const { title, description, category, image } = page.data;
         return (
             <div className="row project-row align-items-center">
                 <div className="col-md-5">
                     <img
-                        src="//placehold.it/720x440"
+                        src={require(`../assets/${image}`)}
                         className="img-fluid"
                         alt={title}
                     />

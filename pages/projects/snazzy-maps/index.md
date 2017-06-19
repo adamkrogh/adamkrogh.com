@@ -5,6 +5,7 @@ layout: project
 path: "/projects/snazzy-maps/"
 category: "projects"
 color: "#139459"
+image: "snazzymaps-screen.png"
 description: "A community centered around creating and sharing beautiful styles for Google Maps."
 ---
 

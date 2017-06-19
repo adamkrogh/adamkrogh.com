@@ -7,7 +7,7 @@ const Jumbotron = ({ children, className }) => (
     </section>
 );
 
-const Intro = styled(Jumbotron) `
+const Intro = styled(Jumbotron)`
     background-color: ${props => props.color || '#0084c2'};
     color: #f2f2f2;
     @media (min-width: 576px) {
