@@ -4,7 +4,8 @@ title: "Tripitty"
 layout: project
 path: "/projects/tripitty/"
 category: "c#,jquery"
-color: "#0d9fb0"
+color: "#2DABF0"
+inverse: true
 image: "tripitty-screen.png"
 description: "A web app for helping avid travellers track and share their world travel."
 ---

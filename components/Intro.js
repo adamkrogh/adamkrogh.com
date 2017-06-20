@@ -8,8 +8,8 @@ const Jumbotron = ({ children, className }) => (
 );
 
 const Intro = styled(Jumbotron)`
-    background-color: ${props => props.color || '#0084c2'};
-    color: #f2f2f2;
+    background-color: ${props => props.color || '#0078B8'};
+    color: ${props => (props.inverse ? '#383838' : '#fff')};
     @media (min-width: 576px) {
         padding: 7rem 2rem;
     }

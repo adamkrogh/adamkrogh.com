@@ -4,7 +4,7 @@ title: "Snazzy Maps"
 layout: project
 path: "/projects/snazzy-maps/"
 category: "c#,react"
-color: "#139459"
+color: "#118850"
 image: "snazzymaps-screen.png"
 description: "A community centered around creating and sharing beautiful styles for Google Maps."
 ---
