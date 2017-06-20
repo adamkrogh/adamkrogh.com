@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteHandler, Link } from 'react-router';
+import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
@@ -29,7 +29,7 @@ const AboutLink = styled(Link)`
 
 class Navbar extends React.Component {
     render() {
-        const { location, title } = this.props;
+        const { title } = this.props;
         return (
             <nav className="navbar navbar-inverse bg-inverse">
                 <div className="container">

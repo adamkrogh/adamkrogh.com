@@ -1,8 +1,8 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
 
-import { DefaultPage, ProjectPage } from '../components/Templates';
 import { config } from 'config';
+import { DefaultPage, ProjectPage } from '../components/Templates';
 
 const getLayoutComponent = layout => {
     switch (layout) {

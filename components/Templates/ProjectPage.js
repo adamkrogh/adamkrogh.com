@@ -55,7 +55,7 @@ class ProjectPage extends React.Component {
 
     render() {
         const { page } = this.props.route;
-        const { title, description, category, body, color } = page.data;
+        const { title, description, body, color } = page.data;
         return (
             <StyledPage>
                 <Intro color={color}>

@@ -4,10 +4,10 @@
   "description": "Personal website and portfolio.",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "npm run lint && gatsby build",
     "clean:public": "rimraf public",
     "clean": "npm run clean:public",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public ."
+    "lint": "eslint --ext .js --ignore-pattern public ."
   },
   "repository": {
     "type": "git",

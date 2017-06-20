@@ -12,7 +12,8 @@ class HomePage extends React.Component {
                     <div className="container">
                         <div className="display-3">Hi!</div>
                         <p className="lead ">
-                            I'm Adam Krogh, a full-stack developer living in Edmonton.
+                            {"I'm"} Adam Krogh,
+                            a full-stack developer living in Edmonton.
                         </p>
                     </div>
                 </Intro>

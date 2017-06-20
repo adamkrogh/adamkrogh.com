@@ -8,12 +8,16 @@ const BUILD_TIME = new Date().getTime();
 
 class Html extends React.Component {
     static displayName = 'HTML';
-    static propTypes: {
+    static propTypes = {
         body: PropTypes.string
     };
 
+    static defaultProps = {
+        body: null
+    };
+
     render() {
-        const { body, route } = this.props;
+        const { body } = this.props;
         const title = DocumentTitle.rewind();
 
         let bootstrap;

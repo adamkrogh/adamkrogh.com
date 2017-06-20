@@ -1,6 +1,6 @@
-var cssnext = require('postcss-cssnext');
+const cssnext = require('postcss-cssnext');
 
-exports.modifyWebpackConfig = function (config, env) {
+exports.modifyWebpackConfig = config => {
     config.merge({
         postcss: [
             cssnext({
