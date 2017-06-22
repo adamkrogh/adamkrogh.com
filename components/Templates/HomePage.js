@@ -10,7 +10,7 @@ class HomePage extends React.Component {
             <div>
                 <Intro>
                     <div className="container">
-                        <div className="display-3">Hi!</div>
+                        <div className="display-3">Hi there!</div>
                         <p className="lead ">
                             {"I'm"} Adam Krogh,
                             a full-stack developer living in Edmonton.
