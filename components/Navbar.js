@@ -37,7 +37,7 @@ class Navbar extends React.Component {
                         <h1 className="navbar-brand">{title}</h1>
                     </HomeLink>
                     <AboutLink
-                        to={prefixLink('/profile/')}
+                        to={prefixLink('/about/')}
                         className="sliding float-right"
                     >
                         About & Contact

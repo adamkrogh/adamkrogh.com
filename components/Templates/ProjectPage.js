@@ -20,7 +20,7 @@ const NextButton = styled.div`
 const StyledPage = styled.div`
     margin-bottom: 60px;
 
-    h2 {
+    h3 {
         font-size: 20px;
         margin-top: 50px;
         margin-bottom: 20px;
@@ -55,17 +55,15 @@ class ProjectPage extends React.Component {
 
     render() {
         const { page } = this.props.route;
-        const { title, description, body, color, inverse } = page.data;
+        const { title, description, color, inverse, body } = page.data;
         return (
             <StyledPage>
-                <Intro color={color} inverse={inverse}>
-                    <div className="container">
-                        <h1 className="display-3">{title}</h1>
-                        <p className="lead ">
-                            {description}
-                        </p>
-                    </div>
-                </Intro>
+                <Intro
+                    title={title}
+                    description={description}
+                    color={color}
+                    inverse={inverse}
+                />
                 <section className="content">
                     <div className="container">
                         <div className="col-md-8 offset-md-2">

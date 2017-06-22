@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import backgroundImage from '../assets/bg-intro.png';
 
-const Jumbotron = ({ children, className }) => (
+const Jumbotron = ({ title, description, className }) => (
     <section className={`jumbotron jumbotron-fluid ${className}`}>
-        {children}
+        <div className="container">
+            <h2 className="title">{title}</h2>
+            <p className="lead">{description}</p>
+        </div>
     </section>
 );
 
 const Intro = styled(Jumbotron)`
-    background-color: ${props => props.color || '#0078B8'};
+    background-color: ${props => props.color};
     background-image: url(${backgroundImage});
     background-attachment: fixed;
     color: ${props => (props.inverse ? '#383838' : '#fff')};
@@ -19,23 +23,35 @@ const Intro = styled(Jumbotron)`
         padding: 7rem 2rem;
     }
     
-    .container > h1,
-    .container > div {
+    .title {
+        font-size: 4rem;
+        font-weight: 400;
+        text-transform: none;
+
+        @media (min-width: 576px) and (max-width: 767px) {
+            font-size: 3rem;
+        }
+        
         @media (max-width: 576px) {
-            font-size: 30px;
+            font-size: 2.5em;
         }
-        
-        @media (min-width: 576px) and (max-width: 766px) {
-            font-size: 40px;
-        }
-        
-        margin-bottom: 0.5rem;
     }
 
-    p.lead {
-        font-size: 22px;
+    .lead {
+        font-size: 24px;
     }
-
 `;
+
+Intro.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    inverse: PropTypes.bool
+};
+
+Intro.defaultProps = {
+    color: '#0078B8',
+    inverse: false
+};
 
 export default Intro;

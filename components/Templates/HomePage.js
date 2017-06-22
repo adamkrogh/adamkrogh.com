@@ -8,15 +8,10 @@ class HomePage extends React.Component {
         const { projects } = this.props;
         return (
             <div>
-                <Intro>
-                    <div className="container">
-                        <div className="display-3">Hi there!</div>
-                        <p className="lead ">
-                            {"I'm"} Adam Krogh,
-                            a full-stack developer living in Edmonton.
-                        </p>
-                    </div>
-                </Intro>
+                <Intro
+                    title="Hi there!"
+                    description="I'm Adam Krogh, a full-stack developer living in Edmonton."
+                />
                 <section className="projects">
                     <div className="container">
                         <div className="row">
