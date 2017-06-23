@@ -30,7 +30,8 @@
     "prop-types": "^15.5.10",
     "react-document-title": "^2.0.2",
     "react-ga": "^2.1.2",
-    "styled-components": "1.4.6"
+    "styled-components": "1.4.6",
+    "styled-tools": "^0.1.4"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",

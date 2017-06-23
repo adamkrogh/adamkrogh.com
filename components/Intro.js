@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { ifProp } from 'styled-tools';
 
 import backgroundImage from '../assets/bg-intro.png';
 
@@ -19,10 +20,15 @@ const Intro = styled(Jumbotron)`
     background-attachment: fixed;
     color: ${props => (props.inverse ? '#383838' : '#fff')};
 
+    ${ifProp('fullpage', css`
+        padding: 30vh 0 !important;
+        margin-bottom: 0;
+    `)}
+    
     @media (min-width: 576px) {
         padding: 7rem 2rem;
     }
-    
+
     .title {
         font-size: 4rem;
         font-weight: 400;
@@ -46,12 +52,14 @@ Intro.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     color: PropTypes.string,
-    inverse: PropTypes.bool
+    inverse: PropTypes.bool,
+    fullpage: PropTypes.bool
 };
 
 Intro.defaultProps = {
     color: '#0078B8',
-    inverse: false
+    inverse: false,
+    fullpage: false
 };
 
 export default Intro;

@@ -2,12 +2,15 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 
 import { config } from 'config';
-import { DefaultPage, ProjectPage } from '../components/Templates';
+import { DefaultPage, ProjectPage, AboutPage } from '../components/Templates';
 
 const getLayoutComponent = layout => {
     switch (layout) {
         case 'project':
             return ProjectPage;
+
+        case 'about':
+            return AboutPage;
 
         default:
             return DefaultPage;

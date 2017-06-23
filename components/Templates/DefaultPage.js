@@ -1,32 +1,38 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Intro from '../Intro';
 
-const StyledPage = styled.div`
-    margin-bottom: 60px;
-`;
-
 class DefaultPage extends React.Component {
     render() {
-        const { page } = this.props.route;
-        const { body, color, inverse } = page.data;
+        const { route: { page }, className } = this.props;
+        const {
+            title,
+            body,
+            description,
+            color,
+            inverse,
+            fullpage
+        } = page.data;
         return (
-            <StyledPage>
+            <div className={className}>
                 <Intro
-                    title="Adam Krogh"
-                    description="(Krogh rhymes with &quot;rogue&quot;)"
+                    title={title}
+                    description={description}
                     color={color}
                     inverse={inverse}
+                    fullpage={fullpage}
                 />
-                <section className="content">
-                    <div className="container">
-                        <div className="col-md-8 offset-md-2">
-                            <div dangerouslySetInnerHTML={{ __html: body }} />
+                {body &&
+                    <section className="content">
+                        <div className="container">
+                            <div className="col-md-8 offset-md-2">
+                                <div
+                                    dangerouslySetInnerHTML={{ __html: body }}
+                                />
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </StyledPage>
+                    </section>}
+            </div>
         );
     }
 }

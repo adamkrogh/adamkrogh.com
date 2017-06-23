@@ -1,6 +1,7 @@
 ---
 title: "Adam Krogh"
-layout: page
+description: '(Krogh rhymes with "rogue")'
+layout: about
 path: "/about/"
 color: "#26A65B"
 ---
