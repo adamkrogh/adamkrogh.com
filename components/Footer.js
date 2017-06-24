@@ -40,19 +40,35 @@ const SocialIcon = ({ link, icon, title }) => (
 
 class Footer extends React.Component {
     render() {
-        const { projects } = this.props;
+        const { featured, openSource } = this.props;
         return (
             <StyledFooter>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8 push-md-4 col-sm-12 projects">
+                        <div className="col-md-4 push-md-4 col-sm-12 projects">
                             <h4>Featured Projects</h4>
                             <ul className="list-unstyled">
-                                {projects.map(project => (
+                                {featured.map(project => (
                                     <li key={project.title}>
                                         <Link to={prefixLink(project.path)}>
                                             {project.title}
                                         </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="col-md-4 push-md-4 col-sm-12 projects">
+                            <h4>Open Source on GitHub</h4>
+                            <ul className="list-unstyled">
+                                {openSource.map(({ repo, user }) => (
+                                    <li key={repo}>
+                                        <a
+                                            href={`https://github.com/${user}/${repo}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {repo}
+                                        </a>
                                     </li>
                                 ))}
                             </ul>

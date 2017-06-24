@@ -3,6 +3,10 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
+const StyledProject = styled.div`
+    padding: 40px 0;
+`;
+
 const ProjectLink = styled(Link)`
     color: #2e3b41;
     text-transform: uppercase;
@@ -23,7 +27,7 @@ class FeaturedProject extends React.Component {
         const { page } = this.props;
         const { title, description, category, image } = page.data;
         return (
-            <div className="row project-row align-items-center">
+            <StyledProject className="row align-items-center">
                 <div className="col-md-5">
                     <img
                         src={require(`../assets/${image}`)}
@@ -49,7 +53,7 @@ class FeaturedProject extends React.Component {
                         View Case Study
                     </ProjectLink>
                 </div>
-            </div>
+            </StyledProject>
         );
     }
 }

@@ -1,20 +1,19 @@
 import React from 'react';
-import sortBy from 'lodash/sortBy';
 import DocumentTitle from 'react-document-title';
 
 import { config } from 'config';
 import { HomePage } from '../components/Templates';
+import { getProjectsFromRoute, openSourceProjects } from '../utils/projects';
 
 class SiteIndex extends React.Component {
     render() {
-        const projects = sortBy(
-            this.props.route.pages,
-            page => page.data.id
-        ).filter(page => page.data.layout === 'project');
-
+        const featuredProjects = getProjectsFromRoute(this.props.route);
         return (
             <DocumentTitle title={config.siteTitle}>
-                <HomePage projects={projects} />
+                <HomePage
+                    featured={featuredProjects}
+                    openSource={openSourceProjects}
+                />
             </DocumentTitle>
         );
     }

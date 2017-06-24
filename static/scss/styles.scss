@@ -74,10 +74,6 @@ $navbar-padding-y: (40px / 2) !default;
 // Utility classes
 @import "node_modules/bootstrap/scss/utilities";
 
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-}
-
 .jumbotron .title {
     font-family: $headings-font-family;
 }
@@ -115,8 +111,4 @@ footer a {
     .navbar .container {
         margin: 0;
     }
-}
-
-.project-row {
-    padding: 40px 0;
 }
