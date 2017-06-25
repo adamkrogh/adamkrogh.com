@@ -93,6 +93,18 @@ class Html extends React.Component {
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
                     <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
+                    <script
+                        type="text/javascript"
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                if ('serviceWorker' in navigator) {
+                                    navigator.serviceWorker.register(
+                                        '/service-worker.js'
+                                    );
+                                }
+                            `
+                        }}
+                    />
                 </body>
             </html>
         );
