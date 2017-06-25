@@ -47,8 +47,10 @@
     "eslint-plugin-jsx-a11y": "5.0.1",
     "eslint-plugin-react": "7.0.1",
     "font-awesome": "^4.7.0",
+    "fs-extra-promise": "^1.0.1",
     "node-sass": "^3.11.2",
     "postcss-loader": "^0.9.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "sitemap": "^1.12.1"
   }
 }
