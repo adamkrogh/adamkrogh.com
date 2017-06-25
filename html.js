@@ -41,6 +41,24 @@ class Html extends React.Component {
             );
         }
 
+        let serviceWorker;
+        if (process.env.NODE_ENV === 'production') {
+            serviceWorker = (
+                <script
+                    type="text/javascript"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            if ('serviceWorker' in navigator) {
+                                navigator.serviceWorker.register(
+                                    '/service-worker.js'
+                                );
+                            }
+                        `
+                    }}
+                />
+            );
+        }
+
         return (
             <html lang="en">
                 <head>
@@ -93,18 +111,7 @@ class Html extends React.Component {
                         dangerouslySetInnerHTML={{ __html: this.props.body }}
                     />
                     <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
-                    <script
-                        type="text/javascript"
-                        dangerouslySetInnerHTML={{
-                            __html: `
-                                if ('serviceWorker' in navigator) {
-                                    navigator.serviceWorker.register(
-                                        '/service-worker.js'
-                                    );
-                                }
-                            `
-                        }}
-                    />
+                    {serviceWorker}
                 </body>
             </html>
         );
