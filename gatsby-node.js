@@ -1,7 +1,6 @@
 import fs from 'fs-extra-promise';
 import sm from 'sitemap';
 import orderBy from 'lodash/orderBy';
-import { EOL } from 'os';
 
 const cssnext = require('postcss-cssnext');
 
@@ -62,20 +61,17 @@ const generateSitemap = pages => {
     fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap.toString());
 };
 
-const generateRobots = () => {
-    const contents = [
-        'User-agent: *',
-        'Disallow:',
-        'Sitemap: https://adamkrogh.com/sitemap.xml',
-        ''
-    ];
-
-    console.log('Generating robots.txt'); // eslint-disable-line no-console
-    fs.writeFileSync(`${__dirname}/public/robots.txt`, contents.join(EOL));
+const copyStaticFiles = () => {
+    console.log('Copying static files'); // eslint-disable-line no-console
+    fs.copySync(
+        `${__dirname}/static/`,
+        `${__dirname}/public/`,
+        src => !/scss/.test(src) // don't copy scss files
+    );
 };
 
 export const postBuild = (pages, callback) => {
     generateSitemap(pages);
-    generateRobots();
+    copyStaticFiles();
     callback();
 };
