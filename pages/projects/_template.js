@@ -34,9 +34,10 @@ const StyledPage = styled.div`
 
     p > a {
         color: ${props => props.color};
+        text-decoration: underline !important;
 
         &:hover {
-            text-decoration: underline !important;
+            text-decoration: none !important;
         }
     }
 `;
