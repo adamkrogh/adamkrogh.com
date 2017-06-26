@@ -52,7 +52,7 @@ export default class SnazzyMaps extends React.Component {
                         map editors, a WordPress plugin, and over 100,000 users.
                     </p>
 
-                    <h3>Problem -&gt; Solution</h3>
+                    <h3>From Problem to Solution</h3>
                     <p>
                         Google puts a lot of effort into the look and feel of their maps.
                         However, sometimes their default styles can clash with the styles
@@ -124,7 +124,7 @@ export default class SnazzyMaps extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Tech Buzzwords</h3>
+                    <h3>Technology Stack</h3>
                     <p>
                         Over the development of Snazzy Maps, we have consistently
                         delivered well-designed, usable features. Some of the technology that has made this possible is:

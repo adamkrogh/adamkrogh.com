@@ -45,7 +45,7 @@ export default class Edmonton247 extends React.Component {
                         on the {this.renderLink('Apple App Store')} and
                         and {this.renderLink('Google Play')}.
                     </p>
-                    <h3>Problem -&gt; Solution</h3>
+                    <h3>From Problem to Solution</h3>
                     <p>
                         Outreach workers that assist vulnerable people and those experiencing homeless need
                         to track the people they help. The {"person's"} status,
