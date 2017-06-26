@@ -1,5 +1,8 @@
 import React from 'react';
 
+import devicesImage from '../../../assets/247-edmonton-devices.png';
+import mapImage from '../../../assets/247-edmonton-map.png';
+
 export const data = {
     id: 2,
     title: '24/7 Edmonton',
@@ -13,39 +16,123 @@ export const data = {
 };
 
 export default class Edmonton247 extends React.Component {
+    static links = {
+        'Apple App Store': 'https://itunes.apple.com/ca/app/24-7-edmonton/id934841007',
+        'Google Play': 'https://play.google.com/store/apps/details?id=com.atmist.clients.reach',
+        ETO: 'http://www.socialsolutions.com/case-management-software/'
+    };
+
+    renderLink(key) {
+        return (
+            <a
+                href={Edmonton247.links[key]}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {key}
+            </a>
+        );
+    }
+
     render() {
         return (
             <div>
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, nisl sit amet viverra dapibus, ex eros efficitur sem, a eleifend massa ante a enim. Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
+                        24/7 Edmonton was designed to support the workflow of outreach workers in the field while remaining compatible
+                        with the software outreach teams are already using. It consists of an admin dashboard, webservice, and mobile apps available
+                        on the {this.renderLink('Apple App Store')} and
+                        and {this.renderLink('Google Play')}.
                     </p>
                     <h3>Problem -&gt; Solution</h3>
                     <p>
-                        Proin in aliquet eros, condimentum tempor risus. Aliquam tempus congue lectus, scelerisque tincidunt urna aliquet quis. Mauris egestas imperdiet felis. Suspendisse in tortor sed diam dictum consectetur. Pellentesque malesuada libero eros, nec malesuada diam tristique non. Suspendisse pretium lobortis libero, id hendrerit dolor pretium non. Morbi eget odio posuere, tempor magna ut, mattis ipsum. Sed maximus ante ante, interdum ultricies lacus venenatis et.
+                        Outreach workers that assist vulnerable people and those experiencing homeless need
+                        to track the people they help. The {"person's"} status,
+                        location, and required assistance
+                        used to be written down on paper to be logged into an office system at a later point.
+                    </p>
+                    <p>
+                        We worked with community outreach organizations to create a set of applications that
+                        can be used to log important information while still in the field. This allowed for
+                        near real-time tracking of outreach initiatives and more accurate data overall.
+                    </p>
+
+                </div>
+                <div className="col-md-12">
+                    <img
+                        className="img-fluid"
+                        src={devicesImage}
+                        alt="24/7 Edmonton App"
+                    />
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <h3>Actionable Data</h3>
+                    <p>
+                        With outreach workers completing cases on-site, useful data can be gathered and
+                        acted on than ever before. The admin dashboard of 24/7 Edmonton includes graphs and maps that
+                        help administrators better dispatch help. They can see the most at-risk communities in the city,
+                        as well as what days/times they might need extra assistance. This information has
+                        been invaluable in providing better service and coordinating front-line staff.
+                    </p>
+
+                    <h3>Results</h3>
+                    <p>
+                        Not only was our client blown away with the usefulness of the application, but they
+                        have started recruiting other community organizations to use the app. Since our webservice
+                        syncs all data to {this.renderLink('ETO')} (a case
+                        management platform) several organizations have expressed
+                        interest in the app as well as the data and insights that can be gained from a better workflow.
                     </p>
                 </div>
                 <div className="col-md-12">
                     <img
                         className="img-fluid"
-                        src="https://placehold.it/1440x1000"
-                        alt="Screenshot"
+                        src={mapImage}
+                        alt="24/7 Edmonton Map"
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Results</h3>
+                    <h3>Technology Stack</h3>
                     <p>
-                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget
-                        lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a
-                        suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
+                        With 24/7 Edmonton we have been able to provide several interconnected application
+                        that all work together to assist community organizations, some of the libraries and
+                        frameworks that we utilized for this are:
                     </p>
-
-                    <h3>Tech</h3>
+                    <ul>
+                        <li>
+                            C# and ASP.NET MVC
+                        </li>
+                        <li>
+                            jQuery, Bootstrap, and SCSS
+                        </li>
+                        <li>
+                            Ionic and Cordova
+                        </li>
+                        <li>
+                            AngularJS
+                        </li>
+                        <li>
+                            localForage
+                        </li>
+                        <li>
+                            Highcharts
+                        </li>
+                        <li>
+                            PhantomJS
+                        </li>
+                    </ul>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <h3>Lessons Learned</h3>
                     <p>
-                        Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius
-                        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus
-                        at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit.
+                        24/7 Edmonton was created as a Hybrid Mobile App with Ionic and Cordova.
+                        While this allowed us to create one application that supports both iOS and Android,
+                        it was not without struggles. Early versions of Ionic had several issues with
+                        scrolling and keyboard handling that required lots of workarounds. However,
+                        the powerful combination of Ionic and AngularJS allowed us to implement
+                        complex features such as dynamic form generation,
+                        offline storage, notifications, and geolocation.
                     </p>
                 </div>
             </div>
