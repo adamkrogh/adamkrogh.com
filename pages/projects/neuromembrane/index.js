@@ -1,5 +1,8 @@
 import React from 'react';
 
+import settings from '../../../assets/neuron-settings.png';
+import simulation from '../../../assets/neuron-simulation.png';
+
 export const data = {
     id: 3,
     title: 'Neuromembrane',
@@ -12,39 +15,124 @@ export const data = {
 };
 
 export default class Neuromembrane extends React.Component {
+    static links = {
+        Neuromembrane: 'https://neuromembrane.ualberta.ca',
+        'Hodgkin-Huxley model': 'https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model'
+    };
+
+    renderLink(key) {
+        return (
+            <a
+                href={Neuromembrane.links[key]}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {key}
+            </a>
+        );
+    }
+
     render() {
         return (
             <div>
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pretium, nisl sit amet viverra dapibus, ex eros efficitur sem, a eleifend massa ante a enim. Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
+                        {this.renderLink('Neuromembrane')} is a visual tool to
+                        help students learn neuronscience concepts and
+                        provide a better way to teach these concepts for
+                        professors.
                     </p>
-                    <h3>Problem -&gt; Solution</h3>
+                    <h3>From Problem to Solution</h3>
                     <p>
-                        Proin in aliquet eros, condimentum tempor risus. Aliquam tempus congue lectus, scelerisque tincidunt urna aliquet quis. Mauris egestas imperdiet felis. Suspendisse in tortor sed diam dictum consectetur. Pellentesque malesuada libero eros, nec malesuada diam tristique non. Suspendisse pretium lobortis libero, id hendrerit dolor pretium non. Morbi eget odio posuere, tempor magna ut, mattis ipsum. Sed maximus ante ante, interdum ultricies lacus venenatis et.
+                        Researchers at the University of Alberta wanted a
+                        simple, modern, and visual way to teach their students.
+                        The ideal tool would allow students to input their
+                        experiment parameters, run the simulation, and see
+                        what would actually be occuring in a real neuron.
+                    </p>
+                    <p>
+                        By leveraging open source technology such as Python,
+                        Django, and the Canvas API, we were able to deliver
+                        a tool that solves all of these problems.
                     </p>
                 </div>
                 <div className="col-md-12">
                     <img
                         className="img-fluid"
-                        src="https://placehold.it/1440x1000"
-                        alt="Screenshot"
+                        src={settings}
+                        alt="Neuromembrane Settings"
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Results</h3>
+                    <h3>Dynamic Simulation</h3>
                     <p>
-                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget
-                        lectus at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a
-                        suscipit. In at ex eu ante sagittis rutrum ut id nulla. Vivamus ac varius metus, nec euismod risus.
+                        We support several different simulations, most of which involve
+                        server-side calculations outlined in
+                        the {this.renderLink('Hodgkin-Huxley model')} and
+                        solved with a system of ordinary differential equations.
                     </p>
-
-                    <h3>Tech</h3>
                     <p>
-                        Morbi vitae arcu eget est pharetra luctus posuere vel risus. Donec sollicitudin dolor at justo luctus consequat. Orci varius
-                        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce vel consequat lacus. In eget lectus
-                        at nunc dignissim laoreet. Nam id lacus metus. Quisque sit amet mauris libero. Sed commodo laoreet diam a suscipit.
+                        This mathematical model provides data for each simulation
+                        and is rendered in real-time graphs as the simulation plays out.
+                        Animations are either lined up to occur at certain thresholds or are
+                        triggered at certain points.
+                    </p>
+                    <p>
+                        By having all of the calculations and
+                        animations determined up-front, we can play the
+                        simulation as a sequence of frames with support for rewind, fast-forward,
+                        and pause.
+                    </p>
+                    <h3>Experimental Output</h3>
+                    <p>
+                        Students can see a summary of all of their experimental outcomes
+                        as a set of styled graphs. They can then export their results to
+                        a PDF or text file in order to submit them to the professor.
+                    </p>
+                    <p>
+                        Likewise, the professor can load up these settings files in order
+                        to see if the students were able to set up the simulation correctly to get
+                        the desired outcome.
+                    </p>
+                </div>
+                <div className="col-md-12">
+                    <img
+                        className="img-fluid"
+                        src={simulation}
+                        alt="Neuromembrane Simulation"
+                    />
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <h3>Technology Stack</h3>
+                    <p>
+                        With Neuromembrane, we were able to deliver the client an
+                        easy to use and visually appealing learning tool. Some of the
+                        technology that made this possible is:
+                    </p>
+                    <ul>
+                        <li>
+                            Python and Django
+                        </li>
+                        <li>
+                            HTML Canvas API
+                        </li>
+                        <li>
+                            jQuery
+                        </li>
+                        <li>
+                            Highcharts
+                        </li>
+                    </ul>
+                    <h3>Lessons Learned</h3>
+                    <p>
+                        This simulation was first created in 2013 and has been
+                        continually enhanced with new simulations every year.
+                        Students and professors alike have enjoyed using and learning
+                        from it. The codebase has been kept up to date over the years
+                        but could benefit from some modern web development frameworks like React and Redux.
+                        However, with a finite grant each year and a mandate to provide
+                        more features for students, new experiments usually take priority.
                     </p>
                 </div>
             </div>
