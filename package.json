@@ -28,8 +28,10 @@
     "lodash": "^4.14.1",
     "markdown-it": "^6.0.2",
     "prop-types": "^15.5.10",
+    "react-addons-css-transition-group": "^15.6.0",
     "react-document-title": "^2.0.2",
     "react-ga": "^2.1.2",
+    "react-lazyload": "^2.2.7",
     "styled-components": "1.4.6",
     "styled-tools": "^0.1.4"
   },
