@@ -42,7 +42,7 @@ export default class Edmonton247 extends React.Component {
                     <p>
                         24/7 Edmonton was designed to support the workflow of outreach workers in the field while remaining compatible
                         with the software outreach teams are already using. It consists of an admin dashboard, webservice, and mobile apps available
-                        on the {this.renderLink('Apple App Store')} and
+                        on the {this.renderLink('Apple App Store')}{' '}
                         and {this.renderLink('Google Play')}.
                     </p>
                     <h3>From Problem to Solution</h3>
