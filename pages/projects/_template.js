@@ -24,10 +24,10 @@ const StyledPage = styled.div`
 
     h3 {
         font-size: 20px;
-        margin-top: 50px;
+        margin-top: 40px;
         margin-bottom: 20px;
     }
-
+    
     img {
         margin-top: 20px;
     }

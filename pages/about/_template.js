@@ -7,6 +7,12 @@ import Intro from '../../components/Intro';
 
 const StyledPage = styled.div`
     margin-bottom: 60px;
+    
+    h3 {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
 `;
 
 class Template extends React.Component {
@@ -31,9 +37,7 @@ class Template extends React.Component {
                     />
                     <section className="content">
                         <div className="container">
-                            <div className="col-md-8 offset-md-2">
-                                {this.props.children}
-                            </div>
+                            {this.props.children}
                         </div>
                     </section>
                 </StyledPage>

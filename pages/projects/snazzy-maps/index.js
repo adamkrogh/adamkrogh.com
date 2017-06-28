@@ -41,7 +41,7 @@ export default class SnazzyMaps extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
