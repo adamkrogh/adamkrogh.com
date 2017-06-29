@@ -6,13 +6,7 @@ import LazyLoad from 'react-lazyload';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const StyledProject = styled.div`
-    padding: 40px 0;
-`;
-
-const ProjectLink = styled(Link)`
-    color: #2e3b41;
-    text-transform: uppercase;
-    margin-top: 20px;
+    padding: 20px 0;
 `;
 
 const Tag = styled.span`
@@ -29,43 +23,41 @@ class FeaturedProject extends React.Component {
         const { page } = this.props;
         const { title, description, category, image } = page.data;
         return (
-            <StyledProject className="row align-items-center">
-                <div className="col-md-5">
-                    <LazyLoad height={300} offset={100} once>
-                        <ReactCSSTransitionGroup
-                            transitionName="fade"
-                            transitionAppear
-                            transitionAppearTimeout={500}
-                            transitionEnter={false}
-                            transitionLeave={false}
-                        >
-                            <img
-                                src={require(`../assets/${image}`)}
-                                className="img-fluid"
-                                alt={title}
-                            />
-                        </ReactCSSTransitionGroup>
-                    </LazyLoad>
-                </div>
-                <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1">
-                    <header>
-                        <h3 className="h2">{title}</h3>
-                    </header>
-                    <p dangerouslySetInnerHTML={{ __html: description }} />
-                    <div>
-                        {category &&
-                            category
-                                .split(',')
-                                .map(label => <Tag key={label}>{label}</Tag>)}
+            <Link to={prefixLink(page.path)}>
+                <StyledProject className="row align-items-center featured">
+                    <div className="col-md-5">
+                        <LazyLoad height={300} offset={100} once>
+                            <ReactCSSTransitionGroup
+                                transitionName="fade"
+                                transitionAppear
+                                transitionAppearTimeout={500}
+                                transitionEnter={false}
+                                transitionLeave={false}
+                            >
+                                <img
+                                    src={require(`../assets/${image}`)}
+                                    className="img-fluid"
+                                    alt={title}
+                                />
+                            </ReactCSSTransitionGroup>
+                        </LazyLoad>
                     </div>
-                    <ProjectLink
-                        to={prefixLink(page.path)}
-                        className="sliding inverse"
-                    >
-                        View Case Study
-                    </ProjectLink>
-                </div>
-            </StyledProject>
+                    <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1 featured-body mt-sm-0">
+                        <header>
+                            <h3 className="h2 inverse">{title}</h3>
+                        </header>
+                        <p dangerouslySetInnerHTML={{ __html: description }} />
+                        <div>
+                            {category &&
+                                category
+                                    .split(',')
+                                    .map(label => (
+                                        <Tag key={label}>{label}</Tag>
+                                    ))}
+                        </div>
+                    </div>
+                </StyledProject>
+            </Link>
         );
     }
 }

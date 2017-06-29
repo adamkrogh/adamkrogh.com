@@ -87,7 +87,7 @@ footer a {
     }
 }
 
-.sliding,.navbar-brand,.nav-item-right {
+.sliding,.navbar-brand {
     display: inline-block;
 
     &:after {
@@ -108,6 +108,33 @@ footer a {
         background: #000;
     }
 }
+
+.featured, .oss-project {
+    h3, span {
+        display: inline-block;
+        
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: transparent;
+            transition: width .3s ease, background-color .3s ease;
+        }
+    }
+
+    &:hover {
+        h3:after, span:after {
+            width: 100%;
+            background: #fff;
+        }
+
+        h3.inverse:after, span.inverse:after {
+            background: #000;
+        }
+    }
+}
+
 @include media-breakpoint-down(xs) {
     .navbar .container {
         margin: 0;
@@ -121,4 +148,8 @@ footer a {
 .fade-appear.fade-appear-active {
     opacity: 1;
     transition: opacity .2s ease-in;
+}
+
+.featured > div {
+    margin-top: 20px;
 }

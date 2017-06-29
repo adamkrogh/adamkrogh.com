@@ -12,18 +12,16 @@ class OpenSourceProject extends React.Component {
         const { user, repo, description } = this.props;
         const repoUrl = `https://github.com/${user}/${repo}`;
         return (
-            <div className="col-md-4">
-                <h3>{repo}</h3>
-                <p>{description}</p>
-                <a
-                    href={repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="sliding inverse"
-                >
-                    View Source on GitHub
-                </a>
-            </div>
+            <a
+                href={repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="oss-project col-md-4 mb-4"
+            >
+                <h3 className="mt-2">{repo}</h3>
+                <p className="mb-2">{description}</p>
+                <span className="inverse">View Source on GitHub</span>
+            </a>
         );
     }
 }
