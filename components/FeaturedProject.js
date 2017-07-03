@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
-import LazyLoad from 'react-lazyload';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const StyledProject = styled.div`
     padding: 20px 0;
@@ -26,21 +24,11 @@ class FeaturedProject extends React.Component {
             <Link to={prefixLink(page.path)}>
                 <StyledProject className="row align-items-center featured">
                     <div className="col-md-5">
-                        <LazyLoad height={300} offset={100} once>
-                            <ReactCSSTransitionGroup
-                                transitionName="fade"
-                                transitionAppear
-                                transitionAppearTimeout={500}
-                                transitionEnter={false}
-                                transitionLeave={false}
-                            >
-                                <img
-                                    src={require(`../assets/${image}`)}
-                                    className="img-fluid"
-                                    alt={title}
-                                />
-                            </ReactCSSTransitionGroup>
-                        </LazyLoad>
+                        <img
+                            src={require(`../assets/${image}`)}
+                            className="img-fluid"
+                            alt={title}
+                        />
                     </div>
                     <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1 featured-body mt-sm-0">
                         <header>

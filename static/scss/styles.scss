@@ -141,15 +141,6 @@ footer a {
     }
 }
 
-.fade-appear {
-    opacity: 0.01;
-}
-
-.fade-appear.fade-appear-active {
-    opacity: 1;
-    transition: opacity .2s ease-in;
-}
-
 .featured > div {
     margin-top: 20px;
 }
