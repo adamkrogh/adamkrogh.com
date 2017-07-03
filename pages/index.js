@@ -26,7 +26,7 @@ class SiteIndex extends React.Component {
                 <StyledHomePage>
                     <Intro
                         title="Hi there!"
-                        description="I'm Adam Krogh, a full-stack developer living in Edmonton."
+                        description="I'm Adam Krogh, a full-stack developer interested in all aspects of creating great software."
                     />
                     <section>
                         <div className="container">

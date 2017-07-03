@@ -13,6 +13,15 @@ const StyledPage = styled.div`
         margin-top: 40px;
         margin-bottom: 20px;
     }
+    
+    p > a {
+        color: ${props => props.color};
+        text-decoration: underline !important;
+
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
 `;
 
 class Template extends React.Component {
@@ -27,7 +36,7 @@ class Template extends React.Component {
         const { title, description, color, inverse, fullpage } = page.data;
         return (
             <DocumentTitle title={`${title} - ${config.siteTitle}`}>
-                <StyledPage>
+                <StyledPage color={color}>
                     <Intro
                         title="Adam Krogh"
                         description={description}
