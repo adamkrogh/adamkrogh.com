@@ -152,12 +152,6 @@ export default class SnazzyMaps extends React.Component {
                             jQuery, Bootstrap, and SCSS
                         </li>
                         <li>
-                            React & Redux
-                        </li>
-                        <li>
-                            Styled Components
-                        </li>
-                        <li>
                             Hangfire - Background job processing.
                         </li>
                         <li>
@@ -167,15 +161,39 @@ export default class SnazzyMaps extends React.Component {
                             Intercom - Track user engagement and marketing.
                         </li>
                         <li>
-                            Hangfire - Background job processing.
-                        </li>
-                        <li>
-                            Google AdSense - Adversiting to help pay the bills.
+                            Google AdSense - Advertising to help pay the bills.
                         </li>
                         <li>
                             Microsoft Azure - Cloud hosting, scalable database, full-text searching, blob storage, and CDN.
                         </li>
                     </ul>
+                    <p>
+                        With our latest map builder feature we embraced the latest client side frameworks and libraries such as:
+                        <ul>
+                            <li>
+                                webpack
+                            </li>
+                            <li>
+                                Babel
+                            </li>
+                            <li>
+                                ESLint
+                            </li>
+                            <li>
+                                React
+                            </li>
+                            <li>
+                                Redux
+                            </li>
+                            <li>
+                                Prettier
+                            </li>
+                            <li>
+                                styled-components
+                            </li>
+                        </ul>
+                    </p>
+
                     <h3>Lessons Learned</h3>
                     <p>
                         From what started as a weekend project, Snazzy Maps has grown to a
