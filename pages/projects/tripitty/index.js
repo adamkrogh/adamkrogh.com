@@ -2,6 +2,7 @@ import React from 'react';
 
 import profileImage from '../../../assets/tripitty-profile.png';
 import statsImage from '../../../assets/tripitty-stats.png';
+import { mapExternalLinks } from '../../../utils/links';
 
 export const data = {
     id: 4,
@@ -15,30 +16,23 @@ export const data = {
 };
 
 export default class Tripitty extends React.Component {
-    static links = {
-        Tripitty: 'https://tripitty.com',
-        'view my travel stats': 'https://tripitty.com/adam/stats'
-    };
-
-    renderLink(key) {
-        return (
-            <a
-                href={Tripitty.links[key]}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {key}
-            </a>
-        );
-    }
-
     render() {
+        const Links = mapExternalLinks({
+            Tripitty: {
+                href: 'https://tripitty.com',
+                text: 'Tripitty'
+            },
+            ViewMyStats: {
+                href: 'https://tripitty.com/adam/stats',
+                text: 'view my travel stats'
+            }
+        });
         return (
-            <div>
+            <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
-                        {this.renderLink('Tripitty')} is a site that allows
+                        {Links.Tripitty} is a site that allows
                         travellers to track where they have been, view interesting stats about their travel, and share all this data with friends.
                     </p>
 
@@ -79,8 +73,7 @@ export default class Tripitty extends React.Component {
                         This is my favourite feature of the site. You can
                         see so many details about your travels and have them always
                         update as you add more trips. You
-                        can {this.renderLink('view my travel stats')} to
-                        see where I have been lately!
+                        can {Links.ViewMyStats} to see where I have been lately!
                     </p>
                 </div>
                 <div className="col-md-12">

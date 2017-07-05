@@ -2,6 +2,7 @@ import React from 'react';
 
 import settings from '../../../assets/neuron-settings.png';
 import simulation from '../../../assets/neuron-simulation.png';
+import { mapExternalLinks } from '../../../utils/links';
 
 export const data = {
     id: 3,
@@ -15,30 +16,24 @@ export const data = {
 };
 
 export default class Neuromembrane extends React.Component {
-    static links = {
-        Neuromembrane: 'https://neuromembrane.ualberta.ca',
-        'Hodgkin-Huxley model': 'https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model'
-    };
-
-    renderLink(key) {
-        return (
-            <a
-                href={Neuromembrane.links[key]}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {key}
-            </a>
-        );
-    }
-
     render() {
+        const Links = mapExternalLinks({
+            Neuromembrane: {
+                href: 'https://neuromembrane.ualberta.ca',
+                text: 'Neuromembrane'
+            },
+            HHM: {
+                href: 'https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model',
+                text: 'Hodgkin-Huxley model'
+            }
+        });
+
         return (
-            <div>
+            <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
-                        {this.renderLink('Neuromembrane')} is a visual tool to
+                        {Links.Neuromembrane} is a visual tool to
                         help students learn neuronscience concepts and
                         provide a better way to teach these concepts for
                         professors.
@@ -69,8 +64,8 @@ export default class Neuromembrane extends React.Component {
                     <p>
                         We support several different simulations, most of which involve
                         server-side calculations outlined in
-                        the {this.renderLink('Hodgkin-Huxley model')} and
-                        solved with a system of ordinary differential equations.
+                        the {Links.HHM} and solved with a system of ordinary
+                        differential equations.
                     </p>
                     <p>
                         This mathematical model provides data for each simulation

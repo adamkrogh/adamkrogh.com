@@ -2,6 +2,7 @@ import React from 'react';
 
 import devicesImage from '../../../assets/247-edmonton-devices.png';
 import mapImage from '../../../assets/247-edmonton-map.png';
+import { mapExternalLinks } from '../../../utils/links';
 
 export const data = {
     id: 2,
@@ -16,34 +17,30 @@ export const data = {
 };
 
 export default class Edmonton247 extends React.Component {
-    static links = {
-        'Apple App Store': 'https://itunes.apple.com/ca/app/24-7-edmonton/id934841007',
-        'Google Play': 'https://play.google.com/store/apps/details?id=com.atmist.clients.reach',
-        ETO: 'http://www.socialsolutions.com/case-management-software/'
-    };
-
-    renderLink(key) {
-        return (
-            <a
-                href={Edmonton247.links[key]}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {key}
-            </a>
-        );
-    }
-
     render() {
+        const Links = mapExternalLinks({
+            AppleStore: {
+                href: 'https://itunes.apple.com/ca/app/24-7-edmonton/id934841007',
+                text: 'Apple App Store'
+            },
+            Android: {
+                href: 'https://play.google.com/store/apps/details?id=com.atmist.clients.reach',
+                text: 'Google Play'
+            },
+            ETO: {
+                href: 'http://www.socialsolutions.com/case-management-software/',
+                text: 'ETO'
+            }
+        });
+
         return (
-            <div>
+            <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
                         24/7 Edmonton was designed to support the workflow of outreach workers in the field while remaining compatible
                         with the software outreach teams are already using. It consists of an admin dashboard, webservice, and mobile apps available
-                        on the {this.renderLink('Apple App Store')}{' '}
-                        and {this.renderLink('Google Play')}.
+                        on the {Links.AppleStore} and {Links.Android}.
                     </p>
                     <h3>From Problem to Solution</h3>
                     <p>
@@ -57,7 +54,6 @@ export default class Edmonton247 extends React.Component {
                         can be used to log important information while still in the field. This allowed for
                         near real-time tracking of outreach initiatives and more accurate data overall.
                     </p>
-
                 </div>
                 <div className="col-md-12">
                     <img
@@ -80,7 +76,7 @@ export default class Edmonton247 extends React.Component {
                     <p>
                         Not only was our client blown away with the usefulness of the application, but they
                         have started recruiting other community organizations to use the app. Since our webservice
-                        syncs all data to {this.renderLink('ETO')} (a case
+                        syncs all data to {Links.ETO} (a case
                         management platform) several organizations have expressed
                         interest in the app as well as the data and insights that can be gained from a better workflow.
                     </p>
@@ -122,8 +118,6 @@ export default class Edmonton247 extends React.Component {
                             PhantomJS
                         </li>
                     </ul>
-                </div>
-                <div className="col-md-8 offset-md-2">
                     <h3>Lessons Learned</h3>
                     <p>
                         24/7 Edmonton was created as a Hybrid Mobile App with Ionic and Cordova.

@@ -2,6 +2,7 @@ import React from 'react';
 
 import styleEditor from '../../../assets/snazzy-maps-style-editor.png';
 import mapBuilder from '../../../assets/snazzy-maps-map-editor.png';
+import { mapExternalLinks } from '../../../utils/links';
 
 export const data = {
     id: 1,
@@ -15,37 +16,52 @@ export const data = {
 };
 
 export default class SnazzyMaps extends React.Component {
-    static links = {
-        'Snazzy Maps': 'https://snazzymaps.com',
-        'map styles': 'https://developers.google.com/maps/documentation/javascript/styling',
-        'Subtle Patterns': 'https://www.toptal.com/designers/subtlepatterns/',
-        'style editor': 'https://snazzymaps.com/editor',
-        'WordPress plugin': 'https://wordpress.org/plugins/snazzy-maps/',
-        'Snazzy Info Window': 'https://github.com/atmist/snazzy-info-window',
-        'map builder': 'https://snazzymaps.com/build-a-map',
-        React: 'https://facebook.github.io/react/',
-        Redux: 'http://redux.js.org/'
-    };
-
-    renderLink(key) {
-        return (
-            <a
-                href={SnazzyMaps.links[key]}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                {key}
-            </a>
-        );
-    }
-
     render() {
+        const Links = mapExternalLinks({
+            SnazzyMaps: {
+                href: 'https://snazzymaps.com',
+                text: 'Snazzy Maps'
+            },
+            MapStyles: {
+                href: 'https://developers.google.com/maps/documentation/javascript/styling',
+                text: 'map styles'
+            },
+            SubtlePatterns: {
+                href: 'https://www.toptal.com/designers/subtlepatterns/',
+                text: 'Subtle Patterns'
+            },
+            StyleEditor: {
+                href: 'https://snazzymaps.com/editor',
+                text: 'style editor'
+            },
+            WordPressPlugin: {
+                href: 'https://wordpress.org/plugins/snazzy-maps/',
+                text: 'WordPress plugin'
+            },
+            SnazzyInfoWindow: {
+                href: 'https://github.com/atmist/snazzy-info-window',
+                text: 'Snazzy Info Window'
+            },
+            MapBuilder: {
+                href: 'https://snazzymaps.com/build-a-map',
+                text: 'map builder'
+            },
+            React: {
+                href: 'https://facebook.github.io/react/',
+                text: 'React'
+            },
+            Redux: {
+                href: 'http://redux.js.org/',
+                text: 'Redux'
+            }
+        });
+
         return (
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     <h3>Overview</h3>
                     <p>
-                        {this.renderLink('Snazzy Maps')} is a website built
+                        {Links.SnazzyMaps} is a website built
                         around creating and sharing styles
                         for Google Maps. It has evolved from a simple listing of
                         styles to a full-fledged web application with complex style and
@@ -58,12 +74,12 @@ export default class SnazzyMaps extends React.Component {
                         However, sometimes their default styles can clash with the styles
                         on your website. Google released a relatively unknown feature
                         in version three of their API to solve
-                        this: {this.renderLink('map styles')}!
+                        this: {Links.MapStyles}!
                     </p>
                     <p>
                         The problem was that the styles were difficult to design and
                         there was nowhere to share a style you had created. Taking inspiration
-                        from {this.renderLink('Subtle Patterns')}, I created
+                        from {Links.SubtlePatterns}, I created
                         the first version of Snazzy Maps that was simply a directory of map styles
                         that designers and developers could quickly use in their projects.
                     </p>
@@ -72,7 +88,7 @@ export default class SnazzyMaps extends React.Component {
                         creating styles was still very difficult and error prone.
                         We set out to make creating map styles simple, fun, and easy.
                         After several iterations and a total redesign of the
-                        site we released our {this.renderLink('style editor')}.
+                        site we released our {Links.StyleEditor}.
                     </p>
                 </div>
                 <div className="col-md-12">
@@ -92,7 +108,7 @@ export default class SnazzyMaps extends React.Component {
                         easy it is to style Google Maps. With our REST API, other sites
                         and plugins were now able to fetch a list of beautiful map
                         styles for users instantly. We also created
-                        a {this.renderLink('WordPress plugin')} using
+                        a {Links.WordPressPlugin} using
                         this API that integrates with existing maps and enhances
                         them with the {"user's"} chosen style.
                     </p>
@@ -103,17 +119,16 @@ export default class SnazzyMaps extends React.Component {
                         We wanted to help designers and developers with all aspects of Google Maps.
                         Next, we created a customizable popup window for use
                         in Google Maps and open sourced it under the
-                        name {this.renderLink('Snazzy Info Window')} which
+                        name {Links.SnazzyInfoWindow} which
                         now has over 200 stars on GitHub.
                     </p>
                     <p>
                         The next step was to help users with creating a Google Map for their website.
                         We set out to create a fully
-                        featured {this.renderLink('map builder')}.
+                        featured {Links.MapBuilder}.
                         This was our most ambitious feature yet and
-                        we utilized {this.renderLink('React')}{' '}
-                        and {this.renderLink('Redux')} to create a fast,
-                        maintainable solution with a component-based architecture.
+                        we utilized {Links.React} and {Links.Redux} to create
+                        a fast, maintainable solution with a component-based architecture.
                     </p>
                 </div>
                 <div className="col-md-12">
@@ -161,8 +176,6 @@ export default class SnazzyMaps extends React.Component {
                             Microsoft Azure - Cloud hosting, scalable database, full-text searching, blob storage, and CDN.
                         </li>
                     </ul>
-                </div>
-                <div className="col-md-8 offset-md-2">
                     <h3>Lessons Learned</h3>
                     <p>
                         From what started as a weekend project, Snazzy Maps has grown to a

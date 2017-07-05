@@ -19,6 +19,7 @@ const Intro = styled(Jumbotron)`
     background-image: url(${backgroundImage});
     background-attachment: fixed;
     color: ${props => (props.inverse ? '#383838' : '#fff')};
+    margin-bottom: 0px;
 
     ${ifProp('fullpage', css`
         padding: 30vh 0 !important;

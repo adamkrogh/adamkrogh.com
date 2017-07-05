@@ -2,8 +2,8 @@ import React from 'react';
 import ExternalLink from '../components/ExternalLink';
 
 export const mapExternalLinks = links => {
-    return Object.entries(links).reduce((acc, [key, val]) => {
-        acc[key] = <ExternalLink {...val} />;
+    return Object.keys(links).reduce((acc, key) => {
+        acc[key] = <ExternalLink {...links[key]} />;
         return acc;
     }, {});
 };
