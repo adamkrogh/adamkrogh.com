@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import 'node_modules/font-awesome/scss/font-awesome.scss';
 import 'static/scss/styles.scss';
@@ -15,6 +16,15 @@ class Template extends React.Component {
         );
         return (
             <div>
+                <Helmet
+                    defaultTitle={config.siteTitle}
+                    titleTemplate={`%s - ${config.siteTitle}`}
+                >
+                    <meta
+                        name="description"
+                        content="Hi there! I'm Adam Krogh, a full-stack developer interested in all aspects of creating great software."
+                    />
+                </Helmet>
                 <Navbar title={config.siteTitle} {...this.props} />
                 {children}
                 <Footer

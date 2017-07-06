@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 
-import { config } from 'config';
 import Intro from '../../components/Intro';
 
 const StyledPage = styled.div`
@@ -35,22 +34,23 @@ class Template extends React.Component {
         const page = this.getCurrentPage();
         const { title, description, color, inverse, fullpage } = page.data;
         return (
-            <DocumentTitle title={`${title} - ${config.siteTitle}`}>
-                <StyledPage color={color}>
-                    <Intro
-                        title="Adam Krogh"
-                        description={description}
-                        color={color}
-                        inverse={inverse}
-                        fullpage={fullpage}
-                    />
-                    <section className="content">
-                        <div className="container">
-                            {this.props.children}
-                        </div>
-                    </section>
-                </StyledPage>
-            </DocumentTitle>
+            <StyledPage color={color}>
+                <Helmet>
+                    <title>{title}</title>
+                </Helmet>
+                <Intro
+                    title="Adam Krogh"
+                    description={description}
+                    color={color}
+                    inverse={inverse}
+                    fullpage={fullpage}
+                />
+                <section className="content">
+                    <div className="container">
+                        {this.props.children}
+                    </div>
+                </section>
+            </StyledPage>
         );
     }
 }

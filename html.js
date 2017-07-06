@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 import styleSheet from 'styled-components/lib/models/StyleSheet';
 
@@ -18,7 +18,7 @@ class Html extends React.Component {
 
     render() {
         const { body } = this.props;
-        const title = DocumentTitle.rewind();
+        const helmet = Helmet.rewind();
 
         let bootstrap;
         if (process.env.NODE_ENV === 'production') {
@@ -30,6 +30,7 @@ class Html extends React.Component {
                 />
             );
         }
+
         let styledComponents;
         if (process.env.NODE_ENV === 'production') {
             const styles = styleSheet
@@ -68,7 +69,8 @@ class Html extends React.Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=5.0"
                     />
-                    <title>{title}</title>
+                    {helmet.title.toComponent()}
+                    {helmet.meta.toComponent()}
                     <link
                         rel="apple-touch-icon"
                         sizes="180x180"

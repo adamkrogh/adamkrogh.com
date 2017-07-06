@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
-import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 
-import { config } from 'config';
 import Intro from '../../components/Intro';
 
 const NextButton = styled.div`
@@ -74,22 +73,24 @@ class Template extends React.Component {
         const page = this.getCurrentPage();
         const { title, description, color, inverse } = page.data;
         return (
-            <DocumentTitle title={`${title} - ${config.siteTitle}`}>
-                <StyledPage color={color}>
-                    <Intro
-                        title={title}
-                        description={description}
-                        color={color}
-                        inverse={inverse}
-                    />
-                    <section className="content">
-                        <div className="container">
-                            {this.props.children}
-                            {this.renderNextProject()}
-                        </div>
-                    </section>
-                </StyledPage>
-            </DocumentTitle>
+            <StyledPage color={color}>
+                <Helmet>
+                    <title>{title}</title>
+                    <meta name="description" content={description} />
+                </Helmet>
+                <Intro
+                    title={title}
+                    description={description}
+                    color={color}
+                    inverse={inverse}
+                />
+                <section className="content">
+                    <div className="container">
+                        {this.props.children}
+                        {this.renderNextProject()}
+                    </div>
+                </section>
+            </StyledPage>
         );
     }
 }

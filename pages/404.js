@@ -1,5 +1,5 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 
 import Intro from '../components/Intro';
 
@@ -9,15 +9,22 @@ export const data = {
 
 export default class NotFound extends React.Component {
     render() {
+        const title = 'Not Found';
+        const description =
+            'Sorry, but the page you were trying to view does not exist.';
         return (
-            <DocumentTitle title="Not Found">
+            <div>
+                <Helmet>
+                    <title>{title}</title>
+                    <meta name="description" content={description} />
+                </Helmet>
                 <Intro
-                    title="Not Found"
-                    description="Sorry, but the page you were trying to view does not exist."
+                    title={title}
+                    description={description}
                     color="#C91F37"
                     fullpage
                 />
-            </DocumentTitle>
+            </div>
         );
     }
 }
