@@ -16,11 +16,11 @@ class OpenSourceProject extends React.Component {
                 href={repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="oss-project col-md-4 mb-4"
+                className="oss-project col-md-4"
             >
                 <h3 className="mt-2">{repo}</h3>
                 <p className="mb-2">{description}</p>
-                <span className="inverse">View Source on GitHub</span>
+                <span className="hover-underline inverse">View Source on GitHub</span>
             </a>
         );
     }

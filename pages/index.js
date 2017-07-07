@@ -5,14 +5,18 @@ import { getProjectsFromRoute, openSourceProjects } from '../utils/projects';
 import Intro from '../components/Intro';
 import FeaturedProject from '../components/FeaturedProject';
 import OpenSourceProject from '../components/OpenSourceProject';
+import SectionHeader from '../components/SectionHeader';
 
 const StyledHomePage = styled.div`
-    > section {
-        margin-bottom: 40px;
+    .open-source-section {
+        padding-bottom: 60px;
+        background-color: #f4f4f4;
     }
 
-    .open-source {
-        padding: 40px 0;
+    @media (max-width: 576px) {
+        .open-source a {
+            margin-bottom: 30px;
+        }
     }
 `;
 
@@ -20,7 +24,7 @@ class SiteIndex extends React.Component {
     render() {
         const featured = getProjectsFromRoute(this.props.route);
         return (
-            <StyledHomePage>
+            <StyledHomePage className="page">
                 <Intro
                     title="Hi there!"
                     description="I'm Adam Krogh, a full-stack developer interested in all aspects of creating great software."
@@ -29,28 +33,28 @@ class SiteIndex extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h2>Featured Projects</h2>
+                                <SectionHeader>Featured Projects</SectionHeader>
+                                {featured.map(page => (
+                                    <FeaturedProject page={page} key={page.data.id} />
+                                ))}
                             </div>
                         </div>
-                        {featured.map(page => (
-                            <FeaturedProject page={page} key={page.data.id} />
-                        ))}
                     </div>
                 </section>
-                <section>
+                <section className="open-source-section">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <h2>Open Source</h2>
+                                <SectionHeader>Open Source</SectionHeader>
+                                <div className="row open-source">
+                                    {openSourceProjects.map(project => (
+                                        <OpenSourceProject
+                                            {...project}
+                                            key={project.repo}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <div className="row open-source">
-                            {openSourceProjects.map(project => (
-                                <OpenSourceProject
-                                    {...project}
-                                    key={project.repo}
-                                />
-                            ))}
                         </div>
                     </div>
                 </section>

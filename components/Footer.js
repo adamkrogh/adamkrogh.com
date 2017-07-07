@@ -9,9 +9,19 @@ const StyledFooter = styled.footer`
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 80px 0px;
-    margin-top: 0px;
+    padding: 80px 0;
+    margin-top: 0;
 
+    .container > .row > div {
+        margin-top: 0;
+
+        @media (max-width: 576px) {
+            & + div {
+                margin-top: 30px;
+            }
+        }
+    }
+    
     .about > * {
         margin-bottom: 15px;
     }

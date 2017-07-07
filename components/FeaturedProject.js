@@ -3,49 +3,45 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
-const StyledProject = styled.div`
-    padding: 20px 0;
+const StyledProject = styled(Link)`
+    display: block;
+    margin: 60px 0;
 `;
 
-const Tag = styled.span`
-    padding: 2px 4px;
-    margin-right: 2px;
-    color: #464a4c;
-    font-size: 12px;
-    border: 1px solid #464a4c;
-    border-radius: 2px;
+const Description = styled.p`
+    margin-bottom: 0.7rem;
+`;
+
+const Categories = styled.div`
+    font-style: italic;
+    line-height: 1.1;
+    font-size: 0.9em;
+    color: #999;
 `;
 
 class FeaturedProject extends React.Component {
     render() {
         const { page } = this.props;
-        const { title, description, category, image } = page.data;
+        const { title, description, category } = page.data;
         return (
-            <Link to={prefixLink(page.path)}>
-                <StyledProject className="row align-items-center featured">
+            <StyledProject to={prefixLink(page.path)}>
+                <div className="row align-items-center featured">
                     <div className="col-md-5">
                         <img
-                            src={require(`../assets/${image}`)}
+                            src="https://placehold.it/600x400"
                             className="img-fluid"
                             alt={title}
                         />
                     </div>
                     <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1 featured-body mt-sm-0">
                         <header>
-                            <h3 className="h2 inverse">{title}</h3>
+                            <h3 className="h2 hover-underline inverse">{title}</h3>
                         </header>
-                        <p dangerouslySetInnerHTML={{ __html: description }} />
-                        <div>
-                            {category &&
-                                category
-                                    .split(',')
-                                    .map(label => (
-                                        <Tag key={label}>{label}</Tag>
-                                    ))}
-                        </div>
+                        <Description dangerouslySetInnerHTML={{ __html: description }} />
+                        <Categories>{category.replace(',', ', ')}</Categories>
                     </div>
-                </StyledProject>
-            </Link>
+                </div>
+            </StyledProject>
         );
     }
 }

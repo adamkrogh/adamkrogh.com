@@ -3,6 +3,7 @@ import React from 'react';
 import styleEditor from '../../../assets/snazzy-maps-style-editor.png';
 import mapBuilder from '../../../assets/snazzy-maps-map-editor.png';
 import { mapExternalLinks } from '../../../utils/links';
+import SectionHeader from '../../../components/SectionHeader';
 
 export const data = {
     id: 1,
@@ -59,7 +60,7 @@ export default class SnazzyMaps extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <h3>Overview</h3>
+                    <SectionHeader>Overview</SectionHeader>
                     <p>
                         {Links.SnazzyMaps} is a website built
                         around creating and sharing styles
@@ -67,8 +68,9 @@ export default class SnazzyMaps extends React.Component {
                         styles to a full-fledged web application with complex style and
                         map editors, a WordPress plugin, and over 100,000 users.
                     </p>
-
-                    <h3>From Problem to Solution</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>From Problem to Solution</SectionHeader>
                     <p>
                         Google puts a lot of effort into the look and feel of their maps.
                         However, sometimes their default styles can clash with the styles
@@ -99,7 +101,7 @@ export default class SnazzyMaps extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Community Response</h3>
+                    <SectionHeader>Community Response</SectionHeader>
                     <p>
                         After releasing our style editor, designers and developers finally had an
                         easy way to create, edit, and use map styles for Google Maps. The
@@ -112,8 +114,9 @@ export default class SnazzyMaps extends React.Component {
                         this API that integrates with existing maps and enhances
                         them with the {"user's"} chosen style.
                     </p>
-
-                    <h3>Moving Beyond Just Map Styles</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Moving Beyond Just Map Styles</SectionHeader>
                     <p>
                         Map styles is only one component of a well designed map.
                         We wanted to help designers and developers with all aspects of Google Maps.
@@ -139,7 +142,7 @@ export default class SnazzyMaps extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Technology Stack</h3>
+                    <SectionHeader>Technology Stack</SectionHeader>
                     <p>
                         Over the development of Snazzy Maps, we have consistently
                         delivered well-designed, usable features. Some of the technology that has made this possible is:
@@ -193,8 +196,9 @@ export default class SnazzyMaps extends React.Component {
                             </li>
                         </ul>
                     </p>
-
-                    <h3>Lessons Learned</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Lessons Learned</SectionHeader>
                     <p>
                         From what started as a weekend project, Snazzy Maps has grown to a
                         web application used by millions of people.

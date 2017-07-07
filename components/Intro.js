@@ -3,23 +3,24 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { ifProp } from 'styled-tools';
 
-import backgroundImage from '../assets/bg-intro.png';
+const Lead = styled.p`
+    max-width: 25em;
+`;
 
 const Jumbotron = ({ title, description, className }) => (
     <section className={`jumbotron jumbotron-fluid ${className}`}>
         <div className="container">
-            <h2 className="title">{title}</h2>
-            <p className="lead">{description}</p>
+            <h1 className="title">{title}</h1>
+            <Lead className="lead">{description}</Lead>
         </div>
     </section>
 );
 
 const Intro = styled(Jumbotron)`
     background-color: ${props => props.color};
-    background-image: url(${backgroundImage});
-    background-attachment: fixed;
     color: ${props => (props.inverse ? '#383838' : '#fff')};
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    padding: 4rem 1rem;
 
     ${ifProp('fullpage', css`
         padding: 30vh 0 !important;

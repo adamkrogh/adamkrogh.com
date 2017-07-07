@@ -34,7 +34,7 @@ class Template extends React.Component {
         const page = this.getCurrentPage();
         const { title, description, color, inverse, fullpage } = page.data;
         return (
-            <StyledPage color={color}>
+            <StyledPage color={color} className="page">
                 <Helmet>
                     <title>{title}</title>
                 </Helmet>

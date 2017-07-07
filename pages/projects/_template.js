@@ -21,14 +21,12 @@ const NextButton = styled.div`
 const StyledPage = styled.div`
     margin-bottom: 60px;
 
-    h3 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    
-    img {
-        margin-top: 20px;
+    h2 {
+        margin-bottom: 2em;
+        
+        &::before {
+            border-color: ${props => props.color};
+        }
     }
 
     p > a {
@@ -73,7 +71,7 @@ class Template extends React.Component {
         const page = this.getCurrentPage();
         const { title, description, color, inverse } = page.data;
         return (
-            <StyledPage color={color}>
+            <StyledPage color={color} className="page">
                 <Helmet>
                     <title>{title}</title>
                     <meta name="description" content={description} />

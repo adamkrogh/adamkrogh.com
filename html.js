@@ -89,7 +89,7 @@ class Html extends React.Component {
                     <meta name="application-name" content="Adam Krogh" />
                     <meta name="theme-color" content="#ffffff" />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Karla"
+                        href="https://fonts.googleapis.com/css?family=Raleway"
                         rel="stylesheet"
                     />
                     {bootstrap}
