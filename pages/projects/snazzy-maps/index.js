@@ -12,7 +12,7 @@ export const data = {
     path: '/projects/snazzy-maps/',
     category: 'c#,react',
     color: '#118850',
-    image: 'snazzymaps-screen.png',
+    image: 'snazzy-maps-screen.png',
     description: 'A community centered around creating and sharing beautiful styles for Google Maps.'
 };
 

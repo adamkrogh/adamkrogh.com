@@ -22,22 +22,26 @@ const Categories = styled.div`
 class FeaturedProject extends React.Component {
     render() {
         const { page } = this.props;
-        const { title, description, category } = page.data;
+        const { title, description, category, image } = page.data;
         return (
             <StyledProject to={prefixLink(page.path)}>
                 <div className="row align-items-center featured">
                     <div className="col-md-5">
                         <img
-                            src="https://placehold.it/600x400"
+                            src={require(`assets/${image}`)}
                             className="img-fluid"
                             alt={title}
                         />
                     </div>
                     <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1 featured-body mt-sm-0">
                         <header>
-                            <h3 className="h2 hover-underline inverse">{title}</h3>
+                            <h3 className="h2 hover-underline inverse">
+                                {title}
+                            </h3>
                         </header>
-                        <Description dangerouslySetInnerHTML={{ __html: description }} />
+                        <Description
+                            dangerouslySetInnerHTML={{ __html: description }}
+                        />
                         <Categories>{category.replace(',', ', ')}</Categories>
                     </div>
                 </div>
