@@ -4,7 +4,7 @@ import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import Intro from '../../components/Intro';
+import Intro from 'components/Intro';
 
 const NextButton = styled.div`
     text-align: center;

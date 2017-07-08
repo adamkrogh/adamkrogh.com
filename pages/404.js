@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Intro from '../components/Intro';
+import Intro from 'components/Intro';
 
 export const data = {
     path: '/404.html'

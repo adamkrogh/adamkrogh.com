@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import Intro from '../../components/Intro';
+import Intro from 'components/Intro';
 
 const StyledPage = styled.div`
     margin-bottom: 60px;

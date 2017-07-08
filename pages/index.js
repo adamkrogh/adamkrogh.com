@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { getProjectsFromRoute, openSourceProjects } from '../utils/projects';
-import Intro from '../components/Intro';
-import FeaturedProject from '../components/FeaturedProject';
-import OpenSourceProject from '../components/OpenSourceProject';
-import SectionHeader from '../components/SectionHeader';
+import { getProjectsFromRoute, openSourceProjects } from 'utils/projects';
+import Intro from 'components/Intro';
+import FeaturedProject from 'components/FeaturedProject';
+import OpenSourceProject from 'components/OpenSourceProject';
+import SectionHeader from 'components/SectionHeader';
 
 const StyledHomePage = styled.div`
     .open-source-section {
@@ -35,7 +35,10 @@ class SiteIndex extends React.Component {
                             <div className="col-md-12">
                                 <SectionHeader>Featured Projects</SectionHeader>
                                 {featured.map(page => (
-                                    <FeaturedProject page={page} key={page.data.id} />
+                                    <FeaturedProject
+                                        page={page}
+                                        key={page.data.id}
+                                    />
                                 ))}
                             </div>
                         </div>

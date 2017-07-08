@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import 'node_modules/font-awesome/scss/font-awesome.scss';
 import 'static/scss/styles.scss';
 import { config } from 'config';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { getProjectsFromRoute, openSourceProjects } from '../utils/projects';
+import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
+import { getProjectsFromRoute, openSourceProjects } from 'utils/projects';
 
 class Template extends React.Component {
     render() {

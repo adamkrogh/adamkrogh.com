@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { mapExternalLinks } from '../../utils/links';
-import photo from '../../assets/adamkrogh-photo.jpg';
+import { mapExternalLinks } from 'utils/links';
+import photo from 'assets/adamkrogh-photo.jpg';
 
 export const data = {
     title: 'About',
