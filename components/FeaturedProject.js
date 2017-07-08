@@ -26,7 +26,7 @@ const Categories = styled.div`
     font-style: italic;
     line-height: 1.1;
     font-size: 0.9em;
-    color: #999;
+    color: #767676;
 `;
 
 class FeaturedProject extends React.Component {

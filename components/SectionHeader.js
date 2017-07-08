@@ -4,7 +4,7 @@ const SectionHeader = styled.h2`
     text-transform: uppercase;
     font-size: 0.95em;
     letter-spacing: .05em;
-    color: #999;
+    color: #707070;
 
     &::before {
         border-top: 3px solid #0078B8;
