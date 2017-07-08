@@ -2,6 +2,7 @@ import React from 'react';
 
 import { mapExternalLinks } from 'utils/links';
 import photo from 'assets/adamkrogh-photo.jpg';
+import SectionHeader from 'components/SectionHeader';
 
 export const data = {
     title: 'About',
@@ -46,7 +47,7 @@ export default class About extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 pull-md-4">
-                    <h3>About Me</h3>
+                    <SectionHeader>About Me</SectionHeader>
                     <p>
                         I grew up in rural Alberta, Canada on our family farm.
                         Pursuing my early interest in web development, I graduated

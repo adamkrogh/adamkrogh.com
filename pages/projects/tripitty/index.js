@@ -10,7 +10,7 @@ export const data = {
     title: 'Tripitty',
     layout: 'project',
     path: '/projects/tripitty/',
-    category: 'c#,jquery',
+    category: 'c#, jquery',
     color: '#2DABF0',
     image: 'tripitty-screen.png',
     description: 'A web app for helping avid travellers track and share their world travel.'

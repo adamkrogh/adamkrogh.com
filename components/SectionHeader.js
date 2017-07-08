@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-
 const SectionHeader = styled.h2`
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.95em;
     letter-spacing: .05em;
-    font-weight: 600;
     color: #999;
 
     &::before {

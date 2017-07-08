@@ -10,7 +10,7 @@ export const data = {
     title: 'Snazzy Maps',
     layout: 'project',
     path: '/projects/snazzy-maps/',
-    category: 'c#,react',
+    category: 'c#, react',
     color: '#118850',
     image: 'snazzy-maps-screen.png',
     description: 'A community centered around creating and sharing beautiful styles for Google Maps.'

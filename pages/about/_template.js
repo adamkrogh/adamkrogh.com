@@ -7,12 +7,14 @@ import Intro from 'components/Intro';
 const StyledPage = styled.div`
     margin-bottom: 60px;
     
-    h3 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
+    h2 {
+        margin-bottom: 2em;
+        
+        &::before {
+            border-color: ${props => props.color};
+        }
     }
-    
+
     p > a {
         color: ${props => props.color};
         text-decoration: underline !important;

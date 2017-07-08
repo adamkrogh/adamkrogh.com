@@ -11,6 +11,10 @@ const StyledHomePage = styled.div`
     .open-source-section {
         padding-bottom: 60px;
         background-color: #f4f4f4;
+
+        h2 {
+            margin-bottom: 30px;
+        }
     }
 
     @media (max-width: 576px) {

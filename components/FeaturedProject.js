@@ -5,7 +5,17 @@ import styled from 'styled-components';
 
 const StyledProject = styled(Link)`
     display: block;
-    margin: 60px 0;
+    margin: 45px 0;
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 767px) {
+        .hover-underline {
+            text-decoration: underline;
+        }
+    }
 `;
 
 const Description = styled.p`
@@ -33,7 +43,7 @@ class FeaturedProject extends React.Component {
                             alt={title}
                         />
                     </div>
-                    <div className="col-md-5 offset-md-1 col-sm-7 offset-sm-1 featured-body mt-sm-0">
+                    <div className="col-md-5 offset-md-1 featured-body mt-sm-0">
                         <header>
                             <h3 className="h2 hover-underline inverse">
                                 {title}
@@ -42,7 +52,7 @@ class FeaturedProject extends React.Component {
                         <Description
                             dangerouslySetInnerHTML={{ __html: description }}
                         />
-                        <Categories>{category.replace(',', ', ')}</Categories>
+                        <Categories>{category}</Categories>
                     </div>
                 </div>
             </StyledProject>

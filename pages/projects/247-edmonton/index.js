@@ -10,7 +10,7 @@ export const data = {
     title: '24/7 Edmonton',
     layout: 'project',
     path: '/projects/247-edmonton/',
-    category: 'c#,ionic,angular',
+    category: 'c#, ionic, angular',
     color: '#F5A72D',
     inverse: true,
     image: '247edmonton-screen.png',

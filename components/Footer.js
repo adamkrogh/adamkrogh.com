@@ -105,7 +105,7 @@ class Footer extends React.Component {
                                 />
                             </div>
                             <FooterButton href="#">
-                                Download Resume
+                                Download Résumé
                             </FooterButton>
                         </div>
                     </div>

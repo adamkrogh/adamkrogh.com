@@ -10,7 +10,7 @@ export const data = {
     title: 'Neuromembrane',
     layout: 'project',
     path: '/projects/neuromembrane/',
-    category: 'python,canvas api',
+    category: 'python, canvas api',
     color: '#8E44AD',
     image: 'neuron-screen.png',
     description: 'An educational simulator designed to teach students about neuroscience concepts.'
