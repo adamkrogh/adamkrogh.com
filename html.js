@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
+import styleSheet from 'styled-components/lib/models/StyleSheet';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -27,6 +28,17 @@ class Html extends React.Component {
                         __html: require('!raw!./public/styles.css')
                     }}
                 />
+            );
+        }
+
+        let styledComponents;
+        if (process.env.NODE_ENV === 'production') {
+            const styles = styleSheet
+                .rules()
+                .map(rule => rule.cssText)
+                .join('\n');
+            styledComponents = (
+                <style dangerouslySetInnerHTML={{ __html: styles }} />
             );
         }
 
@@ -93,6 +105,7 @@ class Html extends React.Component {
                         rel="stylesheet"
                     />
                     {bootstrap}
+                    {styledComponents}
                 </head>
                 <body>
                     <div
