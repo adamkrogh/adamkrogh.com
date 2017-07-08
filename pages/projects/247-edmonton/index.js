@@ -1,8 +1,9 @@
 import React from 'react';
 
-import devicesImage from '../../../assets/247-edmonton-devices.png';
-import mapImage from '../../../assets/247-edmonton-map.png';
-import { mapExternalLinks } from '../../../utils/links';
+import devicesImage from 'assets/247-edmonton-devices.png';
+import mapImage from 'assets/247-edmonton-map.png';
+import { mapExternalLinks } from 'utils/links';
+import SectionHeader from 'components/SectionHeader';
 
 export const data = {
     id: 2,
@@ -36,13 +37,15 @@ export default class Edmonton247 extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <h3>Overview</h3>
+                    <SectionHeader>Overview</SectionHeader>
                     <p>
                         24/7 Edmonton was designed to support the workflow of outreach workers in the field while remaining compatible
                         with the software outreach teams are already using. It consists of an admin dashboard, webservice, and mobile apps available
                         on the {Links.AppleStore} and {Links.Android}.
                     </p>
-                    <h3>From Problem to Solution</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>From Problem to Solution</SectionHeader>
                     <p>
                         Outreach workers that assist vulnerable people and those experiencing homeless need
                         to track the people they help. The {"person's"} status,
@@ -63,7 +66,7 @@ export default class Edmonton247 extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Actionable Data</h3>
+                    <SectionHeader>Actionable Data</SectionHeader>
                     <p>
                         With outreach workers completing cases on-site, useful data can be gathered and
                         acted on than ever before. The admin dashboard of 24/7 Edmonton includes graphs and maps that
@@ -71,8 +74,9 @@ export default class Edmonton247 extends React.Component {
                         as well as what days/times they might need extra assistance. This information has
                         been invaluable in providing better service and coordinating front-line staff.
                     </p>
-
-                    <h3>Results</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Results</SectionHeader>
                     <p>
                         Not only was our client blown away with the usefulness of the application, but they
                         have started recruiting other community organizations to use the app. Since our webservice
@@ -89,7 +93,7 @@ export default class Edmonton247 extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Technology Stack</h3>
+                    <SectionHeader>Technology Stack</SectionHeader>
                     <p>
                         With 24/7 Edmonton we have been able to provide several interconnected application
                         that all work together to assist community organizations, some of the libraries and
@@ -118,7 +122,9 @@ export default class Edmonton247 extends React.Component {
                             PhantomJS
                         </li>
                     </ul>
-                    <h3>Lessons Learned</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Lessons Learned</SectionHeader>
                     <p>
                         24/7 Edmonton was created as a Hybrid Mobile App with Ionic and Cordova.
                         While this allowed us to create one application that supports both iOS and Android,

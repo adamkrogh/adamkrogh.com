@@ -1,9 +1,9 @@
 import React from 'react';
 
-import styleEditor from '../../../assets/snazzy-maps-style-editor.png';
-import mapBuilder from '../../../assets/snazzy-maps-map-editor.png';
-import { mapExternalLinks } from '../../../utils/links';
-import SectionHeader from '../../../components/SectionHeader';
+import styleEditor from 'assets/snazzy-maps-style-editor.png';
+import mapBuilder from 'assets/snazzy-maps-map-editor.png';
+import { mapExternalLinks } from 'utils/links';
+import SectionHeader from 'components/SectionHeader';
 
 export const data = {
     id: 1,

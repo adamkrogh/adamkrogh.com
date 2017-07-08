@@ -1,8 +1,9 @@
 import React from 'react';
 
-import profileImage from '../../../assets/tripitty-profile.png';
-import statsImage from '../../../assets/tripitty-stats.png';
-import { mapExternalLinks } from '../../../utils/links';
+import profileImage from 'assets/tripitty-profile.png';
+import statsImage from 'assets/tripitty-stats.png';
+import { mapExternalLinks } from 'utils/links';
+import SectionHeader from 'components/SectionHeader';
 
 export const data = {
     id: 4,
@@ -30,13 +31,14 @@ export default class Tripitty extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <h3>Overview</h3>
+                    <SectionHeader>Overview</SectionHeader>
                     <p>
                         {Links.Tripitty} is a site that allows
                         travellers to track where they have been, view interesting stats about their travel, and share all this data with friends.
                     </p>
-
-                    <h3>From Problem to Solution</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>From Problem to Solution</SectionHeader>
                     <p>
                         The idea for the site grew from my love for travel and nerdiness for tracking where I have been.
                         I wanted to be able to log my trips easily and instantly get a bunch of stats ranging from what countries
@@ -51,7 +53,7 @@ export default class Tripitty extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Travel Profile</h3>
+                    <SectionHeader>Travel Profile</SectionHeader>
                     <p>
                         A world map with the {"user's"} trips mapped out
                         is one main feature of their profile. Users can
@@ -60,8 +62,9 @@ export default class Tripitty extends React.Component {
                         detail as you want, including arrival/departure dates,
                         excursions, and layovers.
                     </p>
-
-                    <h3>Nerdy Stats</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Nerdy Stats</SectionHeader>
                     <p>
                         By leveraging the travel data that the user has entered
                         on their profile, we can calculate all the interesting stats
@@ -84,7 +87,7 @@ export default class Tripitty extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Technology Stack</h3>
+                    <SectionHeader>Technology Stack</SectionHeader>
                     <p>
                         We worked on Tripitty as a side project with
                         a desire to visualize travel data for users. We accomplished this
@@ -107,7 +110,9 @@ export default class Tripitty extends React.Component {
                             Microsoft Azure - Cloud hosting, blob storage, and CDN.
                         </li>
                     </ul>
-                    <h3>Lessons Learned</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Lessons Learned</SectionHeader>
                     <p>
                         I still really like this project and frequently add
                         my new trips in. It has not gained much traction with users though.

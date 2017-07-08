@@ -1,8 +1,9 @@
 import React from 'react';
 
-import settings from '../../../assets/neuron-settings.png';
-import simulation from '../../../assets/neuron-simulation.png';
-import { mapExternalLinks } from '../../../utils/links';
+import settings from 'assets/neuron-settings.png';
+import simulation from 'assets/neuron-simulation.png';
+import { mapExternalLinks } from 'utils/links';
+import SectionHeader from 'components/SectionHeader';
 
 export const data = {
     id: 3,
@@ -31,14 +32,16 @@ export default class Neuromembrane extends React.Component {
         return (
             <div className="row">
                 <div className="col-md-8 offset-md-2">
-                    <h3>Overview</h3>
+                    <SectionHeader>Overview</SectionHeader>
                     <p>
                         {Links.Neuromembrane} is a visual tool to
                         help students learn neuronscience concepts and
                         provide a better way to teach these concepts for
                         professors.
                     </p>
-                    <h3>From Problem to Solution</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>From Problem to Solution</SectionHeader>
                     <p>
                         Researchers at the University of Alberta wanted a
                         simple, modern, and visual way to teach their students.
@@ -60,7 +63,7 @@ export default class Neuromembrane extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Dynamic Simulation</h3>
+                    <SectionHeader>Dynamic Simulation</SectionHeader>
                     <p>
                         We support several different simulations, most of which involve
                         server-side calculations outlined in
@@ -79,7 +82,9 @@ export default class Neuromembrane extends React.Component {
                         simulation as a sequence of frames with support for rewind, fast-forward,
                         and pause.
                     </p>
-                    <h3>Experimental Output</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Experimental Output</SectionHeader>
                     <p>
                         Students can see a summary of all of their experimental outcomes
                         as a set of styled graphs. They can then export their results to
@@ -99,7 +104,7 @@ export default class Neuromembrane extends React.Component {
                     />
                 </div>
                 <div className="col-md-8 offset-md-2">
-                    <h3>Technology Stack</h3>
+                    <SectionHeader>Technology Stack</SectionHeader>
                     <p>
                         With Neuromembrane, we were able to deliver the client an
                         easy to use and visually appealing learning tool. Some of the
@@ -119,7 +124,9 @@ export default class Neuromembrane extends React.Component {
                             Highcharts
                         </li>
                     </ul>
-                    <h3>Lessons Learned</h3>
+                </div>
+                <div className="col-md-8 offset-md-2">
+                    <SectionHeader>Lessons Learned</SectionHeader>
                     <p>
                         This simulation was first created in 2013 and has been
                         continually enhanced with new simulations every year.
