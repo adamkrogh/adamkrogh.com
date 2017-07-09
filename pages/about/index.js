@@ -63,10 +63,26 @@ export default class About extends React.Component {
                         modern web and mobile applications.
                     </p>
                     <p>
+                        As a lead developer and architect I have been directly involved
+                        in all aspects of delivering great software. From requirements gathering,
+                        mockups, and estimates to development, testing, and deployments.
+                    </p>
+                    <p>
                         My personal interests
                         include {Links.Travel}, {Links.Reading},
-                        and {Links.Music}.
+                        and experimenting with random tech.
                     </p>
+                </div>
+                <div className="col-md-8">
+                    <SectionHeader>Skills</SectionHeader>
+                    <ul>
+                        <li>C# and ASP.NET MVC</li>
+                        <li>JavaScript with ES6+</li>
+                        <li>Cordova, Ionic, and Angular</li>
+                        <li>React and Redux</li>
+                        <li>Build tools including Gulp and webpack</li>
+                        <li>Cloud deployments with Microsoft Azure</li>
+                    </ul>
                 </div>
             </div>
         );

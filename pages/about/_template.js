@@ -5,14 +5,19 @@ import { Helmet } from 'react-helmet';
 import Intro from 'components/Intro';
 
 const StyledPage = styled.div`
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     
     h2 {
-        margin-bottom: 2em;
+        margin-bottom: 30px;
+        margin-top: 45px;
         
         &::before {
             border-color: ${props => props.color};
         }
+    }
+
+    .container > .row > div {
+        margin-top: 0;
     }
 
     p > a {
