@@ -1,8 +1,31 @@
 ## adamkrogh.com
 
-Personal website and portfolio. Built using React and Gatsby.
+Personal website and portfolio. Built using the static site generator Gatsby and React.
+
+### Features
+
+- Gatsby
+- React
+- styled-components
+- PWA support with a service worker
+- Bootstrap 4
+
+### Performance
+
+Gatsby is a blazing-fast static site generator for React. With a few additions such as
+a service worker and a focus on accessibility and best practices, the site scores very
+high on Lighthouse (Google's automated performance analyzer).
+
+![Lighthouse Score](/assets/readme-lighthouse.png)
+
+### Todo
+
+- Upgrade to the latest Gatsby
+- Add SVG sprite support instead of font awesome
+- Lazy load images
 
 ## License
+
 The MIT license.
 
 Copyright (c) 2017 Adam Krogh
