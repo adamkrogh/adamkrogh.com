@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import styled from 'styled-components';
 
+import { config } from 'config';
+
 const StyledFooter = styled.footer`
     background-color: #292b2c;
     color: #ddd;
@@ -104,7 +106,12 @@ class Footer extends React.Component {
                                     title="LinkedIn Profile"
                                 />
                             </div>
-                            <FooterButton href="#">
+                            <FooterButton
+                                href={config.resumeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download
+                            >
                                 Download Résumé
                             </FooterButton>
                         </div>

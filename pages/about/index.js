@@ -1,8 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { mapExternalLinks } from 'utils/links';
 import photo from 'assets/adamkrogh-photo.jpg';
 import SectionHeader from 'components/SectionHeader';
+import { config } from 'config';
 
 export const data = {
     title: 'About',
@@ -10,6 +12,30 @@ export const data = {
     path: '/about/',
     color: '#26A65B'
 };
+
+const StyledPanel = styled.div`
+    margin: 45px auto 0 auto;
+    max-width: 250px;
+
+    img {
+        border-top-right-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
+    }
+
+    .list-group .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+`;
+
+const StyledListItem = styled.a`
+    font-size: 0.85em;
+
+    i {
+        font-size: 1.2em;
+        padding-right: 1.25rem;
+    }
+`;
 
 export default class About extends React.Component {
     render() {
@@ -29,22 +55,47 @@ export default class About extends React.Component {
             Reading: {
                 href: 'https://goodreads.com/adamkrogh',
                 text: 'reading'
-            },
-            Music: {
-                href: 'https://www.last.fm/user/adamkrogh/listening-report/week',
-                text: 'listening to random music'
             }
         });
 
         return (
-            <div className="row align-items-center">
-                <div className="col-md-4 push-md-8 col-sm-12 projects">
-                    <img
-                        src={photo}
-                        alt="adamkrogh"
-                        className="img-fluid rounded-circle mx-auto d-block"
-                        width="250px"
-                    />
+            <div className="row">
+                <div className="col-md-4 push-md-8 col-sm-12">
+                    <StyledPanel>
+                        <img
+                            src={photo}
+                            alt="adamkrogh"
+                            className="img-fluid mx-auto d-block"
+                            width="250px"
+                        />
+                        <div className="list-group">
+                            <StyledListItem
+                                href="mailto:hello@adamkrogh.com?subject=Hi!"
+                                className="list-group-item list-group-item-action"
+                            >
+                                <i
+                                    className="fa fa-envelope"
+                                    aria-hidden="true"
+                                    title="Email me: hello@adamkrogh.com"
+                                />
+                                hello@adamkrogh.com
+                            </StyledListItem>
+                            <StyledListItem
+                                href={config.resumeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="list-group-item list-group-item-action"
+                                download
+                            >
+                                <i
+                                    className="fa fa-file-code-o"
+                                    aria-hidden="true"
+                                    title="Download my résumé"
+                                />
+                                Download Résumé
+                            </StyledListItem>
+                        </div>
+                    </StyledPanel>
                 </div>
                 <div className="col-md-8 pull-md-4">
                     <SectionHeader>About Me</SectionHeader>
@@ -78,8 +129,8 @@ export default class About extends React.Component {
                     <ul>
                         <li>C# and ASP.NET MVC</li>
                         <li>JavaScript with ES6+</li>
-                        <li>Cordova, Ionic, and Angular</li>
                         <li>React and Redux</li>
+                        <li>Cordova, Ionic, and Angular</li>
                         <li>Build tools including Gulp and webpack</li>
                         <li>Cloud deployments with Microsoft Azure</li>
                     </ul>
