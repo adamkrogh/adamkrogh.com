@@ -85,7 +85,6 @@ export default class About extends React.Component {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="list-group-item list-group-item-action"
-                                download
                             >
                                 <i
                                     className="fa fa-file-code-o"

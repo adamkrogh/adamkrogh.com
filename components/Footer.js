@@ -110,7 +110,6 @@ class Footer extends React.Component {
                                 href={config.resumeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                download
                             >
                                 Download Résumé
                             </FooterButton>
